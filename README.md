@@ -6,3 +6,49 @@ Android Studio に取り込む際は、 File -> Import Project... から Gradle 
 
 この雛形は Android Studio から自動生成されたファイルを含むので、その部分に関しては Android Studio のライセンスに従います。
 私が修正した部分のライセンスは Apache License 2.0 とします。
+
+
+
+ABS は以下の様な修正をしてローカルリポジトリに入れて使用している
+
+```
+diff --git a/actionbarsherlock/build.gradle b/actionbarsherlock/build.gradle
+index 5b05162..c05924d 100644
+--- a/actionbarsherlock/build.gradle
++++ b/actionbarsherlock/build.gradle
+@@ -1,7 +1,7 @@
+ apply plugin: 'android-library'
+
+ dependencies {
+-  compile 'com.google.android:support-v4:r7'
++  compile 'com.android.support:support-v4:13.0.0'
+ }
+
+ android {
+@@ -16,3 +16,13 @@ android {
+     }
+   }
+ }
++
++apply plugin: 'maven'
++
++uploadArchives {
++    repositories {
++        mavenDeployer {
++            repository(url: "file://localhost/Users/zaki/.m2/repository")
++        }
++    }
++}
+diff --git a/build.gradle b/build.gradle
+index daade24..03d1a0d 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -4,7 +4,7 @@ buildscript {
+   }
+
+   dependencies {
+-    classpath 'com.android.tools.build:gradle:0.4'
++    classpath 'com.android.tools.build:gradle:0.4.2'
+   }
+ }
+```
