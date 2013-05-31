@@ -1,0 +1,18 @@
+local.properties
+
+# for gradle, IDEA
+.gradle
+build/
+*.iml
+!.idea/runConfigurations/*
+.idea/*.xml
+.idea/.name
+.idea/copyright/
+.idea/libraries/
+.idea/scopes/
+
+# for eclipse
+bin
+gen
+.classpath
+.project

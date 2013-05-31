@@ -1,0 +1,18 @@
+apply plugin: 'android'
+
+dependencies {
+    compile files('libs/okhttp-1.0.2.jar')
+    compile files('libs/volley.jar')
+    compile "com.android.support:support-v4:${supportV4Version}"
+    compile project(':MyLibrary')
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 16
+    }
+}
