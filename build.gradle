@@ -9,6 +9,16 @@ buildscript {
     }
 }
 
+subprojects {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+//        maven {
+//            url "file://$System.env.HOME/.m2/repository"
+//        }
+    }
+}
+
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
     supportV4Version = "13.0.0"

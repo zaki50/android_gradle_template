@@ -4,6 +4,7 @@ dependencies {
     compile files('libs/okhttp-1.0.2.jar')
     compile files('libs/volley.jar')
     compile "com.android.support:support-v4:${supportV4Version}"
+    compile "com.actionbarsherlock:actionbarsherlock:4.3.2-SNAPSHOT"
     compile project(':MyLibrary')
 }
 
@@ -13,6 +14,6 @@ android {
 
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 16
+        targetSdkVersion 17
     }
 }
