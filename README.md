@@ -35,7 +35,7 @@ index 5b05162..c05924d 100644
 +uploadArchives {
 +    repositories {
 +        mavenDeployer {
-+            repository(url: "file://localhost/Users/zaki/.m2/repository")
++            repository(url: "file://$System.env.HOME/.m2/repository")
 +        }
 +    }
 +}
