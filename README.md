@@ -4,3 +4,5 @@ Android Studio(+gradle) 用のプロジェクトの雛形です。
 
 Android Studio に取り込む際は、 File -> Import Project... から Gradle のプロジェクトとして取り込んでください。
 
+この雛形は Android Studio から自動生成されたファイルを含むので、その部分に関しては Android Studio のライセンスに従います。
+私が修正した部分のライセンスは Apache License 2.0 とします。
