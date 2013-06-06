@@ -3,10 +3,14 @@ Android Studio(+gradle) 用のプロジェクトの雛形です。
 環境変数 ANDROID_HOME に sdk のパスを設定した上で使用することを前提としています。
 
 Android Studio に取り込む際は、 File -> Import Project... から Gradle のプロジェクトとして取り込んでください。
+その後、 apt で生成されたファイルを Android Studio から参照できるようにするため以下の設定を行なってください。
+  MyTemplate プロジェクトを選択し、 File > Project Structure を開く
+  Modules ＞MyTemplate を選択し Sources タブを選んで build/source/apt_generated/debug を選択し、上にある Sourcesボタン を押して Sourceフォルダとする。
+
+
 
 この雛形は Android Studio から自動生成されたファイルを含むので、その部分に関しては Android Studio のライセンスに従います。
 私が修正した部分のライセンスは Apache License 2.0 とします。
-
 
 
 ABS は以下の様な修正をしてローカルリポジトリに入れて使用している
