@@ -8,6 +8,7 @@ configurations {
 
 dependencies {
 
+    // http://stackoverflow.com/questions/16683944/androidannotations-nothing-generated-empty-activity/16802216#16802216
     apt "com.googlecode.androidannotations:androidannotations:${androidAnnotationsVersion}"
     compile "com.googlecode.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
 
