@@ -1,7 +1,5 @@
 apply plugin: 'android'
 
-ext.androidAnnotationsVersion = '2.7.1';
-
 configurations {
     apt
 }
@@ -15,7 +13,10 @@ dependencies {
     compile files('libs/okhttp-1.0.2.jar')
     compile files('libs/volley.jar')
     compile "com.android.support:support-v4:${supportV4Version}"
-    compile "com.actionbarsherlock:actionbarsherlock:4.3.2-SNAPSHOT"
+    compile "com.actionbarsherlock:actionbarsherlock:${absVersion}"
+    compile "commons-lang:commons-lang:${commonsLangVersion}"
+    compile "commons-io:commons-io:${commonsIoVersion}"
+    compile "com.google.guava:guava:${guavaVersion}"
     compile project(':MyLibrary')
 }
 

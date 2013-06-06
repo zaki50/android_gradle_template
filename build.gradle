@@ -22,4 +22,9 @@ subprojects {
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
     supportV4Version = "13.0.0"
+    absVersion = "4.3.2-SNAPSHOT"
+    androidAnnotationsVersion = '2.7.1';
+    commonsLangVersion = "2.6"
+    commonsIoVersion = "2.4"
+    guavaVersion = "14.0.1"
 }
