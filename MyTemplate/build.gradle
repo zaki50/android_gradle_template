@@ -1,6 +1,16 @@
 apply plugin: 'android'
 
+ext.androidAnnotationsVersion = '2.7.1';
+
+configurations {
+    apt
+}
+
 dependencies {
+
+    apt "com.googlecode.androidannotations:androidannotations:${androidAnnotationsVersion}"
+    compile "com.googlecode.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
+
     compile files('libs/okhttp-1.0.2.jar')
     compile files('libs/volley.jar')
     compile "com.android.support:support-v4:${supportV4Version}"
@@ -15,5 +25,25 @@ android {
     defaultConfig {
         minSdkVersion 7
         targetSdkVersion 17
+    }
+}
+
+
+android.applicationVariants.each { variant ->
+    aptOutput = file("${project.buildDir}/source/apt_generated/${variant.dirName}")
+    println "****************************"
+    println "variant: ${variant.name}"
+    println "manifest:  ${variant.processResources.manifestFile}"
+    println "aptOutput:  ${aptOutput}"
+    println "****************************"
+
+    variant.javaCompile.doFirst {
+        println "*** compile doFirst ${variant.name}"
+        aptOutput.mkdirs()
+        variant.javaCompile.options.compilerArgs += [
+                '-processorpath', configurations.apt.getAsPath(),
+                '-AandroidManifestFile=' + variant.processResources.manifestFile,
+                '-s', aptOutput
+        ]
     }
 }
