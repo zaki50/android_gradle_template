@@ -3,9 +3,10 @@ Android Studio(+gradle) 用のプロジェクトの雛形です。
 環境変数 ANDROID_HOME に sdk のパスを設定した上で使用することを前提としています。
 
 Android Studio に取り込む際は、 File -> Import Project... から Gradle のプロジェクトとして取り込んでください。
+
 その後、 apt で生成されたファイルを Android Studio から参照できるようにするため以下の設定を行なってください。
-  MyTemplate プロジェクトを選択し、 File > Project Structure を開く
-  Modules ＞MyTemplate を選択し Sources タブを選んで build/source/apt_generated/debug を選択し、上にある Sourcesボタン を押して Sourceフォルダとする。
+* MyTemplate プロジェクトを選択し、 File > Project Structure を開く
+* Modules ＞MyTemplate を選択し Sources タブを選んで build/source/apt_generated/debug を選択し、上にある Sourcesボタン を押して Sourceフォルダとする。
 
 
 
