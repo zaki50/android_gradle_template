@@ -27,4 +27,5 @@ project.ext {
     commonsLangVersion = "2.6"
     commonsIoVersion = "2.4"
     guavaVersion = "14.0.1"
+    jppVersion = '1.6.+';
 }

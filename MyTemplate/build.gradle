@@ -10,6 +10,10 @@ dependencies {
     apt "com.googlecode.androidannotations:androidannotations:${androidAnnotationsVersion}"
     compile "com.googlecode.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
 
+    // http://d.hatena.ne.jp/esmasui/20130607/1370574632
+    compile "net.vvakame:jsonpullparser-core:${jppVersion}"
+    apt "net.vvakame:jsonpullparser-apt:${jppVersion}"
+
     compile files('libs/okhttp-1.0.2.jar')
     compile files('libs/volley.jar')
     compile "com.android.support:support-v4:${supportV4Version}"
