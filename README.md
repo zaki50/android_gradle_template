@@ -14,7 +14,7 @@ Android Studio に取り込む際は、 File -> Import Project... から Gradle 
 私が修正した部分のライセンスは Apache License 2.0 とします。
 
 
-ABS は以下の様な修正をしてローカルリポジトリに入れて使用している
+ABS は以下の様な修正をしてローカルリポジトリに入れて( gradle :actionbarsherlock:uploadArchives )使用している
 
 ```
 diff --git a/actionbarsherlock/build.gradle b/actionbarsherlock/build.gradle
