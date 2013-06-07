@@ -6,9 +6,9 @@ Android Studio に取り込む際は、 File -> Import Project... から Gradle 
 
 その後、 apt で生成されたファイルを Android Studio から参照できるようにするため以下の設定を行なってください。
 * MyTemplate プロジェクトを選択し、 File > Project Structure を開く
-* Modules ＞MyTemplate を選択し Sources タブを選んで build/source/apt_generated/debug を選択し、上にある Sourcesボタン を押して Sourceフォルダとする。
+* Modules ＞ MyTemplate を選択し Sources タブを選んで build/source/apt_generated/debug を選択し、上にある Sourcesボタン を押して Sourceフォルダとする。
 
-
+![add build/source/apt_generated/debug as source folder](README_images/add_generated_as_source_folder.png)
 
 この雛形は Android Studio から自動生成されたファイルを含むので、その部分に関しては Android Studio のライセンスに従います。
 私が修正した部分のライセンスは Apache License 2.0 とします。
