@@ -2,6 +2,8 @@ Android Studio(+gradle) 用のプロジェクトの雛形です。
 
 環境変数 ANDROID_HOME に sdk のパスを設定した上で使用することを前提としています。
 
+    export ANDROID_HOME=/Applications/Android\ Studio.app/sdk
+
 Android Studio に取り込む際は、 File -> Import Project... から Gradle のプロジェクトとして取り込んでください。
 
 その後、 apt で生成されたファイルを Android Studio から参照できるようにするため以下の設定を行なってください。
@@ -14,7 +16,15 @@ Android Studio に取り込む際は、 File -> Import Project... から Gradle 
 私が修正した部分のライセンスは Apache License 2.0 とします。
 
 
-ABS は以下の様な修正をしてローカルリポジトリに入れて( gradle :actionbarsherlock:uploadArchives )使用している
+事前に以下の準備をしておくこと。
+
+* ActionBarSherlock をローカルの maven リポジトリにインストールしておく。手順は以下のとおり
+
+適当なディレクトリに ActionBarSherlock を clone する(4.3.2 以降が必要だが、まだリリースされてないので dev ブランチを使用)。
+
+    git clone git://github.com/JakeWharton/ActionBarSherlock.git -b dev
+
+以下の様な修正をしてローカルリポジトリに入れて( gradle :actionbarsherlock:uploadArchives )使用している。SDK Manager で、 Android 4.0(API 14) をダウンロードしておく必要が有る。
 
 ```
 diff --git a/actionbarsherlock/build.gradle b/actionbarsherlock/build.gradle
