@@ -11,8 +11,11 @@ dependencies {
     compile "com.googlecode.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
 
     // http://d.hatena.ne.jp/esmasui/20130607/1370574632
-    compile "net.vvakame:jsonpullparser-core:${jppVersion}"
     apt "net.vvakame:jsonpullparser-apt:${jppVersion}"
+    compile "net.vvakame:jsonpullparser-core:${jppVersion}"
+
+    apt "com.squareup.dagger:dagger-compiler:${daggerVersion}"
+    compile "com.squareup.dagger:dagger:${daggerVersion}"
 
     compile files('libs/okhttp-1.0.2.jar')
     compile files('libs/volley.jar')
@@ -33,7 +36,6 @@ android {
         targetSdkVersion 17
     }
 }
-
 
 android.applicationVariants.each { variant ->
     aptOutput = file("${project.buildDir}/source/apt_generated/${variant.dirName}")

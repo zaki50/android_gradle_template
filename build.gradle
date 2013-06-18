@@ -23,6 +23,7 @@ subprojects {
 project.ext {
     supportV4Version = "13.0.0"
     absVersion = "4.3.2-SNAPSHOT"
+    daggerVersion = "1.0.1"
     androidAnnotationsVersion = '2.7.1';
     commonsLangVersion = "2.6"
     commonsIoVersion = "2.4"
