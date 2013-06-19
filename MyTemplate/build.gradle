@@ -38,7 +38,7 @@ android {
 }
 
 android.applicationVariants.each { variant ->
-    def aptOutput = file("${project.buildDir}/source/apt_generated/${variant.dirName}")
+    def aptOutput = file("${project.buildDir}/source/r/${variant.dirName}")
     println "****************************"
     println "variant: ${variant.name}"
     println "manifest:  ${variant.processResources.manifestFile}"
@@ -46,8 +46,15 @@ android.applicationVariants.each { variant ->
     println "****************************"
 
     variant.javaCompile.doFirst {
-        println "*** compile doFirst ${variant.name}"
+        println "*** compile doFirst ${variant.name}, aptOutput=${aptOutput}"
         aptOutput.mkdirs()
+        // 古いファイルが存在する場合は消しておく
+        aptOutput.eachFileRecurse groovy.io.FileType.FILES, {
+            if (it.name.equals('R.java')) {
+                return
+            }
+            it.delete()
+        }
         variant.javaCompile.options.compilerArgs += [
                 '-processorpath', configurations.apt.getAsPath(),
                 '-AandroidManifestFile=' + variant.processResources.manifestFile,
