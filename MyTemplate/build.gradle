@@ -20,6 +20,7 @@ dependencies {
     compile files('libs/okhttp-1.0.2.jar')
     compile files('libs/volley.jar')
     compile "com.android.support:support-v4:${supportV4Version}"
+    compile "com.google.android.gms:play-services:${playServicesVersion}"
     compile "com.actionbarsherlock:actionbarsherlock:${absVersion}"
     compile "commons-lang:commons-lang:${commonsLangVersion}"
     compile "commons-io:commons-io:${commonsIoVersion}"
@@ -32,7 +33,7 @@ android {
     buildToolsVersion "17.0.0"
 
     defaultConfig {
-        minSdkVersion 7
+        minSdkVersion 8
         targetSdkVersion 17
     }
 }
