@@ -63,7 +63,7 @@ index daade24..03d1a0d 100644
 
    dependencies {
 -    classpath 'com.android.tools.build:gradle:0.4'
-+    classpath 'com.android.tools.build:gradle:0.4.2'
++    classpath 'com.android.tools.build:gradle:0.4.3'
    }
  }
 ```
