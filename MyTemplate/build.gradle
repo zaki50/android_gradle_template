@@ -37,6 +37,9 @@ android {
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 17
+
+        versionCode 1
+        versionName '0.0.1'
     }
 
     buildTypes {
@@ -69,4 +72,12 @@ android.applicationVariants.each { variant ->
                 '-s', aptOutput
         ]
     }
+}
+
+// BuildConfig に、VERSION_NAME 定数を追加する
+// see https://groups.google.com/d/msg/adt-dev/KJKjUdCtBxg/jMhRwWbIBq8J
+android.applicationVariants.each { variant ->
+    def versionName = variant.mergedFlavor.versionName + (variant.buildType.versionNameSuffix != null ? variant.buildType.versionNameSuffix : "")
+    variant.generateBuildConfig.javaLines += "public static final String VERSION_NAME = \"${versionName}\";".toString()
+
 }
