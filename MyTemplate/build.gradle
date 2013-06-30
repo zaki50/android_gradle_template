@@ -27,6 +27,8 @@ dependencies {
     compile "com.google.guava:guava:${guavaVersion}"
     // guava が内部で参照しているので、入れておかないとProGuard がエラーを出す
     compile "com.google.code.findbugs:jsr305:1.3.+"
+    compile "javax.inject:javax.inject:1"
+
     compile project(':MyLibrary')
 }
 
