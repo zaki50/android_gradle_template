@@ -46,16 +46,4 @@ index 5b05162..c05924d 100644
 +        }
 +    }
 +}
-diff --git a/build.gradle b/build.gradle
-index daade24..03d1a0d 100644
---- a/build.gradle
-+++ b/build.gradle
-@@ -4,7 +4,7 @@ buildscript {
-   }
-
-   dependencies {
--    classpath 'com.android.tools.build:gradle:0.4'
-+    classpath 'com.android.tools.build:gradle:0.4.+'
-   }
- }
 ```
