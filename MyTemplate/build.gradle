@@ -44,13 +44,41 @@ android {
         versionName '0.0.1'
     }
 
+    signingConfigs {
+        // debug {
+        //     storeFile file("debug.keystore")
+        // }
+
+        release
+    }
+
+
     buildTypes {
         release {
             runProguard true
             proguardFile getDefaultProguardFile('proguard-android.txt')
             proguardFile file('proguard-project.txt')
+
+            // release 用の apk に署名を行う場合は次の行をアンコメントしてください。
+            // プロジェクトルートに gradle.properties が存在し、必要なプロパティがセットされていないとビルドエラーになります。
+            // 署名用の設定をする gradle.properties のサンプルとして、gradle.properties.forReleaseSigning を置いたので参考にしてください。:
+            // signingConfig signingConfigs.release
         }
     }
+}
+
+// gradle.properties で定義された値があれば読み込みます。
+if (project.hasProperty('storeFile')) {
+    android.signingConfigs.release.storeFile = file(storeFile)
+}
+if (project.hasProperty('storePassword')) {
+    android.signingConfigs.release.storePassword = storePassword
+}
+if (project.hasProperty('keyAlias')) {
+    android.signingConfigs.release.keyAlias = keyAlias
+}
+if (project.hasProperty('keyPassword')) {
+    android.signingConfigs.release.keyPassword = keyPassword
 }
 
 android.applicationVariants.each { variant ->
