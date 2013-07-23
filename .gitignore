@@ -11,6 +11,7 @@ build/
 .idea/copyright/
 .idea/libraries/
 .idea/scopes/
+.idea/inspectionProfiles/
 
 # for eclipse
 bin
