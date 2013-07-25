@@ -21,7 +21,7 @@ subprojects {
 
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
-    supportV4Version = "13.0.0"
+    supportV4Version = "18.0.+"
     playServicesVersion = "3.1.36"
     absVersion = "4.3.2-SNAPSHOT"
     daggerVersion = "1.0.1"
