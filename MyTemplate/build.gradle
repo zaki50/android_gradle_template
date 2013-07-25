@@ -18,8 +18,8 @@ dependencies {
     compile "com.squareup.dagger:dagger:${daggerVersion}"
 
     compile "com.android.support:support-v4:${supportV4Version}"
+    compile "com.android.support:appcompat-v7:${appCompatVersion}"
     compile "com.google.android.gms:play-services:${playServicesVersion}"
-    compile "com.actionbarsherlock:actionbarsherlock:${absVersion}"
     compile "commons-lang:commons-lang:${commonsLangVersion}"
     compile "commons-io:commons-io:${commonsIoVersion}"
     compile "com.google.guava:guava:${guavaVersion}"
