@@ -81,7 +81,7 @@ if (project.hasProperty('keyPassword')) {
     android.signingConfigs.release.keyPassword = keyPassword
 }
 
-android.applicationVariants.each { variant ->
+android.applicationVariants.all { variant ->
     // ↓ def を付けないと プロジェクトの Dynamic Property になってしまい、常に最後の variant 用のディレクトリが使われてしまう。
     // variant にソースフォルダを追加する方法が見当たらないので R.java 用のソースフォルダを生成場所として利用する。
     def aptOutput = file("${project.buildDir}/source/r/${variant.dirName}")
@@ -106,7 +106,7 @@ android.applicationVariants.each { variant ->
 
 // BuildConfig に、VERSION_NAME 定数を追加する
 // see https://groups.google.com/d/msg/adt-dev/KJKjUdCtBxg/jMhRwWbIBq8J
-android.applicationVariants.each { variant ->
+android.applicationVariants.all { variant ->
     def versionName = variant.mergedFlavor.versionName + (variant.buildType.versionNameSuffix != null ? variant.buildType.versionNameSuffix : "")
     variant.generateBuildConfig.javaLines += "public static final String VERSION_NAME = \"${versionName}\";".toString()
 
