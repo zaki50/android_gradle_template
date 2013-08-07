@@ -27,6 +27,13 @@ dependencies {
     compile "com.google.code.findbugs:jsr305:1.3.+"
     compile "javax.inject:javax.inject:1"
 
+    compile("com.google.api-client:google-api-client-android:${googleApiClientVersion}") {
+        exclude module: 'xpp3'
+        exclude module: 'httpclient'
+        exclude module: 'junit'
+        exclude module: 'android'
+    }
+
     // libs/ にある *.jar を一括で追加する
     compile fileTree(dir: 'libs', include: '*.jar')
 

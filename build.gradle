@@ -30,4 +30,5 @@ project.ext {
     commonsIoVersion = "2.4"
     guavaVersion = "14.0.1"
     jppVersion = '1.6.+';
+    googleApiClientVersion = "1.16.0-rc"
 }
