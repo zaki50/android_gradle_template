@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="maps_v2_apikey">リリース用の証明書に対応するAPIキーをここに書く</string>
+
+</resources>
