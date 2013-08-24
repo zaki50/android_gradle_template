@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="18" />
 
     <!-- Maps v2 を使う場合は GLES 2.0 が必須 -->
     <uses-feature
