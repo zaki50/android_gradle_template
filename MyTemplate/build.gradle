@@ -17,8 +17,11 @@ dependencies {
     apt "com.squareup.dagger:dagger-compiler:${daggerVersion}"
     compile "com.squareup.dagger:dagger:${daggerVersion}"
 
-    compile "com.android.support:support-v4:${supportV4Version}"
-    compile "com.android.support:appcompat-v7:${appCompatVersion}"
+    compile "com.android.support:appcompat-v7:${supportPackageVersion}"
+
+    // support-v4 は appcompat-v7 の依存に含まれているので明示は不要。appcompat を使わない場合は↓を生かしてsupport-v4 のみにもできる。
+    // compile "com.android.support:support-v4:${supportPackageVersion}"
+
     compile "com.google.android.gms:play-services:${playServicesVersion}"
     compile "commons-lang:commons-lang:${commonsLangVersion}"
     compile "commons-io:commons-io:${commonsIoVersion}"
