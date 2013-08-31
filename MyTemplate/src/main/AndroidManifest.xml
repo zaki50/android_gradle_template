@@ -26,6 +26,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:name=".MyApplication_"
         android:theme="@style/AppTheme" >
         <!-- Maps v2 API キーの設定。
              キーは MyTemplate/src/{debug,release}/res/values/apikeys.xml に記述する -->
