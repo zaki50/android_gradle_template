@@ -13,7 +13,6 @@ package com.example.mytemplate.prngfix;
 /*
   from http://android-developers.blogspot.jp/2013/08/some-securerandom-thoughts.html
   SecureRandom が適切に初期化されていない問題への対処。
-  UUIDが内部で SecureRandom を使っているので MyApplication#onCreate で呼び出します。
  */
 
 
