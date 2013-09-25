@@ -25,6 +25,7 @@ project.ext {
     playServicesVersion = "3.2.+"
     daggerVersion = "1.0.1"
     androidAnnotationsVersion = '2.7.1';
+    nineOldAndroidsVersion = "2.4.0"
     commonsLangVersion = "2.6"
     commonsIoVersion = "2.4"
     guavaVersion = "14.0.1"
