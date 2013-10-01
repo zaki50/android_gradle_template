@@ -8,6 +8,8 @@ android {
     compileSdkVersion 18
     buildToolsVersion "18.1.0"
 
+    compileOptions.encoding = "UTF-8"
+
     defaultConfig {
         minSdkVersion 7
         targetSdkVersion 18
