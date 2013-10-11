@@ -1,21 +1,6 @@
 apply plugin: 'android'
 
-configurations {
-    apt
-}
-
 dependencies {
-
-    // http://stackoverflow.com/questions/16683944/androidannotations-nothing-generated-empty-activity/16802216#16802216
-    apt "com.googlecode.androidannotations:androidannotations:${androidAnnotationsVersion}"
-    compile "com.googlecode.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
-
-    // http://d.hatena.ne.jp/esmasui/20130607/1370574632
-    apt "net.vvakame:jsonpullparser-apt:${jppVersion}"
-    compile "net.vvakame:jsonpullparser-core:${jppVersion}"
-
-    apt "com.squareup.dagger:dagger-compiler:${daggerVersion}"
-    compile "com.squareup.dagger:dagger:${daggerVersion}"
 
     compile "com.nineoldandroids:library:${nineOldAndroidsVersion}"
 
@@ -119,29 +104,6 @@ if (project.hasProperty('keyAlias')) {
 }
 if (project.hasProperty('keyPassword')) {
     android.signingConfigs.release.keyPassword = keyPassword
-}
-
-android.applicationVariants.all { variant ->
-    // ↓ def を付けないと プロジェクトの Dynamic Property になってしまい、常に最後の variant 用のディレクトリが使われてしまう。
-    // variant にソースフォルダを追加する方法が見当たらないので R.java 用のソースフォルダを生成場所として利用する。
-    def aptOutput = file("${project.buildDir}/source/r/${variant.dirName}")
-
-    variant.javaCompile.doFirst {
-        println "*** compile doFirst ${variant.name}, aptOutput=${aptOutput}"
-        aptOutput.mkdirs()
-        // インクリメンタルビルドでエラーになるので古いファイルが存在する場合は消しておく
-        aptOutput.eachFileRecurse groovy.io.FileType.FILES, {
-            if (it.name.equals('R.java')) {
-                return
-            }
-            it.delete()
-        }
-        variant.javaCompile.options.compilerArgs += [
-                '-processorpath', configurations.apt.getAsPath(),
-                '-AandroidManifestFile=' + variant.processResources.manifestFile,
-                '-s', aptOutput
-        ]
-    }
 }
 
 // BuildConfig に、VERSION_NAME 定数を追加する
