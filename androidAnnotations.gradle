@@ -1,0 +1,40 @@
+// original design: https://github.com/Netflix/feign/blob/master/dagger.gradle
+// original design: cfieber
+apply plugin: 'android'
+
+if (!project.hasProperty('androidAnnotationsVersion')) {
+    ext {
+        androidAnnotationsVersion = "2.7.1"
+    }
+}
+
+configurations {
+    androidAnnotationsCompiler {
+        visible false
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        eachDependency { DependencyResolveDetails details ->
+            if (details.requested.group == 'com.googlecode.androidannotations') {
+                details.useVersion androidAnnotationsVersion
+            }
+        }
+    }
+}
+
+dependencies {
+    compile "com.googlecode.androidannotations:androidannotations-api:${project.androidAnnotationsVersion}"
+    androidAnnotationsCompiler "com.googlecode.androidannotations:androidannotations:${project.androidAnnotationsVersion}"
+}
+
+android.applicationVariants.all { variant ->
+    variant.javaCompile.doFirst {
+        variant.javaCompile.classpath += configurations.androidAnnotationsCompiler
+        variant.javaCompile.options.compilerArgs += [
+            '-AandroidManifestFile=' + variant.processResources.manifestFile
+        ]
+    }
+}
+
