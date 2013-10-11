@@ -3,9 +3,7 @@
 apply plugin: 'android'
 
 if (!project.hasProperty('androidAnnotationsVersion')) {
-    ext {
-        androidAnnotationsVersion = "2.7.1"
-    }
+    return
 }
 
 configurations {

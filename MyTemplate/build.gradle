@@ -1,5 +1,9 @@
 apply plugin: 'android'
 
+apply from: rootProject.file('gradle/androidAnnotations.gradle')
+apply from: rootProject.file('gradle/dagger.gradle')
+apply from: rootProject.file('gradle/jpp.gradle')
+
 dependencies {
 
     compile "com.nineoldandroids:library:${nineOldAndroidsVersion}"

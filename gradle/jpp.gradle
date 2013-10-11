@@ -1,0 +1,35 @@
+// original design: https://github.com/Netflix/feign/blob/master/dagger.gradle
+// original design: cfieber
+apply plugin: 'android'
+
+if (!project.hasProperty('jppVersion')) {
+    return
+}
+
+configurations {
+    jppCompiler {
+        visible false
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        eachDependency { DependencyResolveDetails details ->
+            if (details.requested.group == 'net.vvakame') {
+                details.useVersion jppVersion
+            }
+        }
+    }
+}
+
+dependencies {
+    compile "net.vvakame:jsonpullparser-core:${project.jppVersion}"
+    jppCompiler "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
+}
+
+android.applicationVariants.all { variant ->
+    variant.javaCompile.doFirst {
+        variant.javaCompile.classpath += configurations.jppCompiler
+    }
+}
+

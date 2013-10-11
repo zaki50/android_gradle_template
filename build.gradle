@@ -19,12 +19,6 @@ subprojects {
     }
 }
 
-project(':MyTemplate') {
-    apply from: rootProject.file('androidAnnotations.gradle')
-    apply from: rootProject.file('dagger.gradle')
-    apply from: rootProject.file('jpp.gradle')
-}
-
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
     supportPackageVersion = "18.0.+"

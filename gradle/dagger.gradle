@@ -2,14 +2,12 @@
 // original design: cfieber
 apply plugin: 'android'
 
-if (!project.hasProperty('jppVersion')) {
-    ext {
-        jppVersion = "1.6.+"
-    }
+if (!project.hasProperty('daggerVersion')) {
+    return
 }
 
 configurations {
-    jppCompiler {
+    daggerCompiler {
         visible false
     }
 }
@@ -17,21 +15,21 @@ configurations {
 configurations.all {
     resolutionStrategy {
         eachDependency { DependencyResolveDetails details ->
-            if (details.requested.group == 'net.vvakame') {
-                details.useVersion jppVersion
+            if (details.requested.group == 'com.squareup.dagger') {
+                details.useVersion daggerVersion
             }
         }
     }
 }
 
 dependencies {
-    compile "net.vvakame:jsonpullparser-core:${project.jppVersion}"
-    jppCompiler "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
+    compile "com.squareup.dagger:dagger:${project.daggerVersion}"
+    daggerCompiler "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
 }
 
 android.applicationVariants.all { variant ->
     variant.javaCompile.doFirst {
-        variant.javaCompile.classpath += configurations.jppCompiler
+        variant.javaCompile.classpath += configurations.daggerCompiler
     }
 }
 
