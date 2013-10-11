@@ -17,7 +17,9 @@ buildVariants.all { variant ->
     //http://stackoverflow.com/questions/18958388/gradle-androidannotations-generates-duplicate-class-errors-need-to-clean-pro
 
     // ↓ def を付けないと プロジェクトの Dynamic Property になってしまい、常に最後の variant 用のディレクトリが使われてしまう。
-    def aptOutput = file("${project.buildDir}/source/apt_generated/${variant.dirName}")
+    def aptOutputDir = project.file("${project.buildDir}/source/apt_generated")
+    def aptOutput = new File(aptOutputDir, variant.dirName)
+
     println "****************************"
     println "variant: ${variant.name}"
     println "manifest:  ${variant.processResources.manifestFile}"
@@ -29,9 +31,14 @@ buildVariants.all { variant ->
 
     variant.javaCompile.doFirst {
         aptOutput.mkdirs()
+
         variant.javaCompile.options.compilerArgs += [
                 '-s', aptOutput
         ]
+    }
+
+    variant.javaCompile.source = variant.javaCompile.source.filter { p ->
+        return !p.getPath().startsWith(aptOutputDir.getPath())
     }
 }
 
