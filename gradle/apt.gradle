@@ -1,6 +1,18 @@
-apply plugin: 'android'
+project.ext {
+    if (!project.hasProperty('android')) {
+        throw new StopExecutionException("either 'android' plugin or 'android-library' plugin must be applied before this 'apt' plugin")
+    }
 
-android.applicationVariants.all { variant ->
+    if (android.hasProperty('applicationVariants')) {
+        buildVariants = android.applicationVariants
+    } else if (android.hasProperty('libraryVariants')) {
+        buildVariants = android.libraryVariants
+    } else {
+        throw new StopExecutionException('build variants not found. why?')
+    }
+}
+
+buildVariants.all { variant ->
     // ↓ def を付けないと プロジェクトの Dynamic Property になってしまい、常に最後の variant 用のディレクトリが使われてしまう。
     // variant にソースフォルダを追加する方法が見当たらないので R.java 用のソースフォルダを生成場所として利用する。
     def aptOutput = file("${project.buildDir}/source/r/${variant.dirName}")

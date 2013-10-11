@@ -1,6 +1,5 @@
 // original design: https://github.com/Netflix/feign/blob/master/dagger.gradle
 // original design: cfieber
-apply plugin: 'android'
 
 if (!project.hasProperty('daggerVersion')) {
     return
@@ -27,7 +26,7 @@ dependencies {
     daggerCompiler "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
 }
 
-android.applicationVariants.all { variant ->
+buildVariants.all { variant ->
     variant.javaCompile.doFirst {
         variant.javaCompile.classpath += configurations.daggerCompiler
     }
