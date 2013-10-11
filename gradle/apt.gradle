@@ -1,0 +1,22 @@
+apply plugin: 'android'
+
+android.applicationVariants.all { variant ->
+    // ↓ def を付けないと プロジェクトの Dynamic Property になってしまい、常に最後の variant 用のディレクトリが使われてしまう。
+    // variant にソースフォルダを追加する方法が見当たらないので R.java 用のソースフォルダを生成場所として利用する。
+    def aptOutput = file("${project.buildDir}/source/r/${variant.dirName}")
+    variant.javaCompile.doFirst {
+       println "*** compile doFirst ${variant.name}, aptOutput=${aptOutput}"
+       aptOutput.mkdirs()
+       // インクリメンタルビルドでエラーになるので古いファイルが存在する場合は消しておく
+       aptOutput.eachFileRecurse groovy.io.FileType.FILES, {
+           if (it.name.equals('R.java')) {
+               return
+           }
+           it.delete()
+       }
+       variant.javaCompile.options.compilerArgs += [
+               '-s', aptOutput
+       ]
+    }
+}
+
