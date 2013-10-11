@@ -19,11 +19,17 @@ subprojects {
     }
 }
 
+project(':MyTemplate') {
+    apply from: rootProject.file('androidAnnotations.gradle')
+    apply from: rootProject.file('dagger.gradle')
+    apply from: rootProject.file('jpp.gradle')
+}
+
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
     supportPackageVersion = "18.0.+"
     playServicesVersion = "3.2.+"
-    daggerVersion = "1.0.1"
+    daggerVersion = "1.1.0"
     androidAnnotationsVersion = '2.7.1';
     nineOldAndroidsVersion = "2.4.0"
     commonsLangVersion = "2.6"
