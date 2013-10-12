@@ -27,8 +27,6 @@ dependencies {
 }
 
 buildVariants.all { variant ->
-    variant.javaCompile.doFirst {
-        variant.javaCompile.classpath += configurations.daggerCompiler
-    }
+    variant.javaCompile.classpath += configurations.daggerCompiler
 }
 

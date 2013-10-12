@@ -27,11 +27,9 @@ dependencies {
 }
 
 buildVariants.all { variant ->
-    variant.javaCompile.doFirst {
-        variant.javaCompile.classpath += configurations.androidAnnotationsCompiler
-        variant.javaCompile.options.compilerArgs += [
-            '-AandroidManifestFile=' + variant.processResources.manifestFile
-        ]
-    }
+    variant.javaCompile.classpath += configurations.androidAnnotationsCompiler
+    variant.javaCompile.options.compilerArgs += [
+        '-AandroidManifestFile=' + variant.processResources.manifestFile
+    ]
 }
 
