@@ -1,1 +1,1 @@
-include ':MyLibrary', ':MyTemplate'
+include ':MyLibrary', ':MyApplication'
