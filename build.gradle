@@ -21,8 +21,8 @@ subprojects {
 
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
-    supportPackageVersion = "18.0.+"
-    playServicesVersion = "3.2.+"
+    supportPackageVersion = "19.0.+"
+    playServicesVersion = "4.0.+"
     daggerVersion = "1.1.0"
     androidAnnotationsVersion = '2.7.1';
     nineOldAndroidsVersion = "2.4.0"
