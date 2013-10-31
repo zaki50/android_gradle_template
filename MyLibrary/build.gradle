@@ -5,13 +5,17 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 18
+    compileSdkVersion 19
     buildToolsVersion "19.0.0"
 
-    compileOptions.encoding = "UTF-8"
+    compileOptions {
+        encoding = "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
 
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 18
+        targetSdkVersion 19
     }
 }
