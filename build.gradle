@@ -12,10 +12,11 @@ buildscript {
 subprojects {
     repositories {
         mavenCentral()
-        mavenLocal()
-//        maven {
-//            url "file://$System.env.HOME/.m2/repository"
-//        }
+//https://plus.google.com/109385828142935151413/posts/hF7W59uZ7rX
+//        mavenLocal()
+        maven {
+            url "${System.env.HOME}/.m2/repository"
+        }
     }
 }
 
