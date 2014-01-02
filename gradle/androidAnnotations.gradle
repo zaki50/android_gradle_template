@@ -22,8 +22,8 @@ configurations.all {
 }
 
 dependencies {
-    compile "com.googlecode.androidannotations:androidannotations-api:${project.androidAnnotationsVersion}"
-    androidAnnotationsCompiler "com.googlecode.androidannotations:androidannotations:${project.androidAnnotationsVersion}"
+    compile "org.androidannotations:androidannotations-api:${project.androidAnnotationsVersion}"
+    androidAnnotationsCompiler "org.androidannotations:androidannotations:${project.androidAnnotationsVersion}"
 }
 
 buildVariants.all { variant ->

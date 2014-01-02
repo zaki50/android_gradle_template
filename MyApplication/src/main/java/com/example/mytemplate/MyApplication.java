@@ -2,7 +2,7 @@ package com.example.mytemplate;
 
 import android.app.Application;
 import com.example.mytemplate.prngfix.PRNGFixes;
-import com.googlecode.androidannotations.annotations.EApplication;
+import org.androidannotations.annotations.EApplication;
 
 @EApplication
 public class MyApplication extends Application {

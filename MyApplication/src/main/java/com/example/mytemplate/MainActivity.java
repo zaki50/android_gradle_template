@@ -1,8 +1,8 @@
 package com.example.mytemplate;
 
 import android.support.v7.app.ActionBarActivity;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.OptionsMenu;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OptionsMenu;
 
 @EActivity(R.layout.activity_main)
 @OptionsMenu(R.menu.main)

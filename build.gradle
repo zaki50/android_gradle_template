@@ -25,7 +25,7 @@ project.ext {
     supportPackageVersion = "19.0.+"
     playServicesVersion = "4.0.+"
     daggerVersion = "1.1.0"
-    androidAnnotationsVersion = '2.7.1';
+    androidAnnotationsVersion = '3.0';
     nineOldAndroidsVersion = "2.4.0"
     commonsLangVersion = "2.6"
     commonsIoVersion = "2.4"

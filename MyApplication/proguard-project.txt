@@ -5,3 +5,7 @@
   @com.google.api.client.util.Key <fields>;
 }
 -keepattributes Signature,RuntimeVisibleAnnotations,AnnotationDefault
+
+-dontwarn org.springframework.http.HttpAuthentication
+-dontwarn org.springframework.web.client.RestTemplate
+-dontwarn org.springframework.web.client.RestClientException
