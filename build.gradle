@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:0.7.+"
+        classpath "com.android.tools.build:gradle:0.8.+"
         classpath 'com.uphyca.gradle:gradle-android-apt-plugin:0.9.+'
     }
 }
