@@ -30,7 +30,7 @@ project.ext {
     nineOldAndroidsVersion = "2.4.0"
     commonsLangVersion = "2.6"
     commonsIoVersion = "2.4"
-    guavaVersion = "14.0.1"
+    guavaVersion = "16.0"
     jppVersion = '1.6.+';
     googleApiClientVersion = "1.16.0-rc"
 }
