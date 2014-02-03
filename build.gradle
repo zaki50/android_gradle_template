@@ -28,7 +28,7 @@ project.ext {
     daggerVersion = "1.1.0"
     androidAnnotationsVersion = '3.0.1';
     nineOldAndroidsVersion = "2.4.0"
-    commonsLangVersion = "2.6"
+    commonsLangVersion = "3.2.1"
     commonsIoVersion = "2.4"
     guavaVersion = "16.0"
     jppVersion = '1.6.+';

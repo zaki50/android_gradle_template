@@ -20,7 +20,7 @@ dependencies {
     apt "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
 
     compile "com.google.android.gms:play-services:${playServicesVersion}"
-    compile "commons-lang:commons-lang:${commonsLangVersion}"
+    compile "org.apache.commons:commons-lang3:${commonsLangVersion}"
     compile "commons-io:commons-io:${commonsIoVersion}"
     compile "com.google.guava:guava:${guavaVersion}"
     // guava が内部で参照しているので、入れておかないとProGuard がエラーを出す
