@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mytemplate"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+    package="com.example.mytemplate" >
 
     <!-- Maps v2 を使う場合は GLES 2.0 が必須 -->
     <uses-feature
