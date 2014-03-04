@@ -24,3 +24,6 @@
 -keepnames class * implements android.os.Parcelable {
     public static final ** CREATOR;
 }
+
+# for dagger compiler
+-dontwarn dagger.internal.codegen.**
