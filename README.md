@@ -8,3 +8,4 @@ Android Studio に取り込む際は、 File -> Import Project... から Gradle 
 
 私が修正した部分のライセンスは Apache License 2.0 とします。
 
+
