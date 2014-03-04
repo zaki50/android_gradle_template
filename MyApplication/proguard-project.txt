@@ -25,5 +25,10 @@
     public static final ** CREATOR;
 }
 
+# for Butter Knife
+-dontwarn butterknife.internal.**
+-keep class **$$ViewInjector { *; }
+-keepnames class * { @butterknife.InjectView *;}
+
 # for dagger compiler
 -dontwarn dagger.internal.codegen.**

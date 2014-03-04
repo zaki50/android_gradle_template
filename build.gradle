@@ -24,6 +24,7 @@ subprojects {
 project.ext {
     supportPackageVersion = "19.0.+"
     playServicesVersion = "4.2.42"
+    butterKnifeVersion = '4.0.1'
     daggerVersion = "1.2.1"
     androidAnnotationsVersion = '3.0.1';
     nineOldAndroidsVersion = "2.4.0"

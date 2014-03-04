@@ -12,6 +12,10 @@ dependencies {
     compile "org.androidannotations:androidannotations-api:${project.androidAnnotationsVersion}"
     provided "org.androidannotations:androidannotations:${project.androidAnnotationsVersion}"
 
+    // Android Annotations ではなく、 Butter Knife を使う場合はこちら
+    //compile "com.jakewharton:butterknife:${butterKnifeVersion}"
+    //provided "com.jakewharton:butterknife:${butterKnifeVersion}"
+
     compile "com.squareup.dagger:dagger:${project.daggerVersion}"
     provided "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
 
