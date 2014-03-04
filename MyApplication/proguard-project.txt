@@ -32,3 +32,8 @@
 
 # for dagger compiler
 -dontwarn dagger.internal.codegen.**
+
+# for EventBus
+-keepclassmembers class ** {
+    public void onEvent*(**);
+}

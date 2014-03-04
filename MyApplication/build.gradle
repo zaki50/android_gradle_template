@@ -22,6 +22,7 @@ dependencies {
     compile "net.vvakame:jsonpullparser-core:${project.jppVersion}"
     provided "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
 
+    compile "de.greenrobot:eventbus:${eventbusVersion}"
     compile "com.google.android.gms:play-services:${playServicesVersion}"
     compile "org.apache.commons:commons-lang3:${commonsLangVersion}"
     compile "commons-io:commons-io:${commonsIoVersion}"
