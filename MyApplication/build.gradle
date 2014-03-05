@@ -1,4 +1,5 @@
 apply plugin: 'android'
+apply plugin: 'android-apt'
 
 dependencies {
 
@@ -10,17 +11,17 @@ dependencies {
     // compile "com.android.support:support-v4:${supportPackageVersion}"
 
     compile "org.androidannotations:androidannotations-api:${project.androidAnnotationsVersion}"
-    provided "org.androidannotations:androidannotations:${project.androidAnnotationsVersion}"
+    apt "org.androidannotations:androidannotations:${project.androidAnnotationsVersion}"
 
     // Android Annotations ではなく、 Butter Knife を使う場合はこちら
     //compile "com.jakewharton:butterknife:${butterKnifeVersion}"
     //provided "com.jakewharton:butterknife:${butterKnifeVersion}"
 
     compile "com.squareup.dagger:dagger:${project.daggerVersion}"
-    provided "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
+    apt "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
 
     compile "net.vvakame:jsonpullparser-core:${project.jppVersion}"
-    provided "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
+    apt "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
 
     compile "de.greenrobot:eventbus:${eventbusVersion}"
     compile "com.google.android.gms:play-services:${playServicesVersion}"
