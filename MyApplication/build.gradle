@@ -54,8 +54,8 @@ android.applicationVariants.all { variant ->
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.0.3"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion 9
@@ -84,7 +84,6 @@ android {
 
         release
     }
-
 
     buildTypes {
         release {
