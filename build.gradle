@@ -19,10 +19,23 @@ subprojects {
             url "${System.env.HOME}/.m2/repository"
         }
     }
+
+    project.plugins.whenPluginAdded { plugin ->
+        if ("com.android.build.gradle.AppPlugin".equals(plugin.class.name)) {
+            project.android.dexOptions.preDexLibraries = rootProject.ext.preDexLibs
+        } else if ("com.android.build.gradle.LibraryPlugin".equals(plugin.class.name)) {
+            project.android.dexOptions.preDexLibraries = rootProject.ext.preDexLibs
+        }
+    }
 }
 
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
+    // see http://tools.android.com/tech-docs/new-build-system/tips#TOC-Improving-Build-Server-performance.
+    // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
+    preDexLibs = !project.hasProperty('disablePreDex')
+
+
     supportPackageVersion = "19.0.+"
     playServicesVersion = "4.2.42"
     butterKnifeVersion = '4.0.1'
