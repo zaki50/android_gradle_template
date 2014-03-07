@@ -15,10 +15,10 @@ dependencies {
 
     // Android Annotations ではなく、 Butter Knife を使う場合はこちら
     //compile "com.jakewharton:butterknife:${butterKnifeVersion}"
-    //provided "com.jakewharton:butterknife:${butterKnifeVersion}"
+    //apt "com.jakewharton:butterknife:${butterKnifeVersion}"
 
     compile "com.squareup.dagger:dagger:${project.daggerVersion}"
-    provided "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
+    apt "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
 
     compile "net.vvakame:jsonpullparser-core:${project.jppVersion}"
     apt "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
