@@ -5,8 +5,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:0.8.+"
-        classpath 'com.uphyca.gradle:gradle-android-apt-plugin:0.9.+'
+        classpath "com.android.tools.build:gradle:0.9.+"
+        classpath 'com.uphyca.gradle:gradle-android-apt-plugin:0.9.3+'
     }
 }
 
@@ -53,5 +53,5 @@ project.ext {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.9'
+    gradleVersion = '1.11'
 }

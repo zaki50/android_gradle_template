@@ -18,7 +18,7 @@ dependencies {
     //provided "com.jakewharton:butterknife:${butterKnifeVersion}"
 
     compile "com.squareup.dagger:dagger:${project.daggerVersion}"
-    apt "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
+    provided "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
 
     compile "net.vvakame:jsonpullparser-core:${project.jppVersion}"
     apt "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
