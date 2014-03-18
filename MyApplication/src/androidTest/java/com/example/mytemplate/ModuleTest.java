@@ -8,6 +8,8 @@ import dagger.Module;
 import dagger.ObjectGraph;
 import dagger.Provides;
 
+import java.lang.AssertionError;
+
 /**
  * Created by masui on 10/12/13.
  */
