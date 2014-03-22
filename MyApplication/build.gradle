@@ -84,6 +84,11 @@ android {
         release
     }
 
+    aaptOptions {
+        // 最近の PNG processor が生成するファイルがGB端末上でクラッシュを引き起こすとのことなので、その回避策
+        useAaptPngCruncher = true
+    }
+
     buildTypes {
         release {
             runProguard true
