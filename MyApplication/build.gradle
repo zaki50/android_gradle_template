@@ -72,6 +72,7 @@ android {
 
     packagingOptions {
         // exclude duplicate files in apache commons
+        // pickFirst なら最初に見つけたやつが apk に入る
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
     }
