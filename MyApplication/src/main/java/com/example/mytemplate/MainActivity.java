@@ -1,11 +1,17 @@
 package com.example.mytemplate;
 
+import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.OptionsMenu;
+import butterknife.ButterKnife;
 
-@EActivity(R.layout.activity_main)
-@OptionsMenu(R.menu.main)
 public class MainActivity extends ActionBarActivity {
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+
+        ButterKnife.inject(this);
+    }
 }

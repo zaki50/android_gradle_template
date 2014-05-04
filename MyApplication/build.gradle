@@ -10,12 +10,12 @@ dependencies {
     // support-v4 は appcompat-v7 の依存に含まれているので明示は不要。appcompat を使わない場合は↓を生かしてsupport-v4 のみにもできる。
     // compile "com.android.support:support-v4:${supportPackageVersion}"
 
-    compile "org.androidannotations:androidannotations-api:${project.androidAnnotationsVersion}"
-    apt "org.androidannotations:androidannotations:${project.androidAnnotationsVersion}"
+    compile "com.jakewharton:butterknife:${butterKnifeVersion}"
+    apt "com.jakewharton:butterknife:${butterKnifeVersion}"
 
-    // Android Annotations ではなく、 Butter Knife を使う場合はこちら
-    //compile "com.jakewharton:butterknife:${butterKnifeVersion}"
-    //apt "com.jakewharton:butterknife:${butterKnifeVersion}"
+    // Butter Knife ではなく、 Android Annotations を使う場合はこちら
+    //compile "org.androidannotations:androidannotations-api:${project.androidAnnotationsVersion}"
+    //apt "org.androidannotations:androidannotations:${project.androidAnnotationsVersion}"
 
     compile "com.squareup.dagger:dagger:${project.daggerVersion}"
     apt "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
