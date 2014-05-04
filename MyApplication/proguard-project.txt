@@ -37,3 +37,6 @@
 -keepclassmembers class ** {
     public void onEvent*(**);
 }
+
+# for support renderscript
+-keep class android.support.v8.renderscript.** { *; }

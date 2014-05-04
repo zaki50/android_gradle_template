@@ -60,6 +60,10 @@ android {
         minSdkVersion 9
         targetSdkVersion 19
 
+        // support renderscript を使う場合
+        //renderscriptTargetApi 19
+        //renderscriptSupportMode true
+
         versionCode 1
         versionName '0.0.1'
     }
