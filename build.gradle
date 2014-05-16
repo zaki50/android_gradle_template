@@ -32,7 +32,7 @@ subprojects {
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
     compileSdkVersion = 19
-    buildToolsVersion = "19.0.3"
+    buildToolsVersion = "19.1.0"
 
     // see http://tools.android.com/tech-docs/new-build-system/tips#TOC-Improving-Build-Server-performance.
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
@@ -40,16 +40,16 @@ project.ext {
 
     supportPackageVersion = "19.1.+"
     playServicesVersion = "4.3.23"
-    butterKnifeVersion = '4.0.1'
+    butterKnifeVersion = '5.0.1'
     daggerVersion = "1.2.1"
     androidAnnotationsVersion = '3.0.1';
     eventbusVersion = '2.2.+'
     nineOldAndroidsVersion = "2.4.0"
-    commonsLangVersion = "3.2.1"
+    commonsLangVersion = "3.3.2"
     commonsIoVersion = "2.4"
-    guavaVersion = "16.0"
+    guavaVersion = "17.0"
     jppVersion = '1.6.+';
-    googleApiClientVersion = "1.16.0-rc"
+    googleApiClientVersion = "1.18.0-rc"
 }
 
 task wrapper(type: Wrapper) {

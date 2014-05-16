@@ -6,6 +6,7 @@ dependencies {
     compile "com.nineoldandroids:library:${nineOldAndroidsVersion}"
 
     compile "com.android.support:appcompat-v7:${supportPackageVersion}"
+    compile "com.android.support:support-annotations:${supportPackageVersion}"
 
     // support-v4 は appcompat-v7 の依存に含まれているので明示は不要。appcompat を使わない場合は↓を生かしてsupport-v4 のみにもできる。
     // compile "com.android.support:support-v4:${supportPackageVersion}"
