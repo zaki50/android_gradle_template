@@ -39,7 +39,7 @@ project.ext {
     preDexLibs = !project.hasProperty('disablePreDex')
 
     supportPackageVersion = "20.0.+"
-    playServicesVersion = "5.0.77"
+    playServicesVersion = "4.4.52" // wearable 使うならベータ配布されてる 5.0.77 で
     butterKnifeVersion = '5.1.1'
     daggerVersion = "1.2.1"
     androidAnnotationsVersion = '3.0.1';
