@@ -44,6 +44,9 @@ dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
 
     compile project(':MyLibrary')
+
+    // android wear 用のアプリを handheld アプリに埋め込む
+    wearApp project(':wear')
 }
 
 // for Android Annotations
