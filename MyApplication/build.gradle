@@ -93,6 +93,10 @@ android {
     aaptOptions {
         // 最近の PNG processor が生成するファイルがGB端末上でクラッシュを引き起こすとのことなので、その回避策
         useAaptPngCruncher = true
+
+        // android wear 用の apk を asset に置く場合に、圧縮を行わないようにするための設定
+        // see http://developer.android.com/training/wearables/apps/packaging.html
+        noCompress "apk"
     }
 
     buildTypes {
