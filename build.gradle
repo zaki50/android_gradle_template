@@ -31,7 +31,7 @@ subprojects {
 
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
-    compileSdkVersion = 20
+    compileSdkVersion = 19
     buildToolsVersion = "20.0.0"
 
     // see http://tools.android.com/tech-docs/new-build-system/tips#TOC-Improving-Build-Server-performance.
