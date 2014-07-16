@@ -6,6 +6,8 @@ dependencies {
     compile "com.nineoldandroids:library:${nineOldAndroidsVersion}"
 
     compile "com.android.support:support-v13:${supportPackageVersion}"
+    //compile "com.android.support:recyclerview-v7:${supportPackageVersion}"
+    //compile "com.android.support:cardview-v7:${supportPackageVersion}"
     compile "com.android.support:support-annotations:${supportPackageVersion}"
 
     compile "com.jakewharton:butterknife:${butterKnifeVersion}"
@@ -24,6 +26,9 @@ dependencies {
     compile "de.greenrobot:eventbus:${eventbusVersion}"
     //noinspection GradleDependency
     compile "com.google.android.gms:play-services:${playServicesVersion}"
+    // http://googlemaps.github.io/android-maps-utils/
+    compile "com.google.maps.android:android-maps-utils:${androidMapsUtils}"
+
     compile "org.apache.commons:commons-lang3:${commonsLangVersion}"
     compile "commons-io:commons-io:${commonsIoVersion}"
     //noinspection GradleDependency

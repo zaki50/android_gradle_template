@@ -38,8 +38,9 @@ project.ext {
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
     preDexLibs = !project.hasProperty('disablePreDex')
 
-    supportPackageVersion = "20.0.+"
+    supportPackageVersion = '20.0.+' // '21.0.+'
     playServicesVersion = "5.0.77"
+    androidMapsUtils = '0.3.+'
     butterKnifeVersion = '5.1.1'
     daggerVersion = "1.2.1"
     androidAnnotationsVersion = '3.0.1';
