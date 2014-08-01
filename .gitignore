@@ -18,3 +18,7 @@ bin
 gen
 .classpath
 .project
+
+
+# for Crashlytics
+crashlytics.properties
