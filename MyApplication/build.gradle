@@ -117,6 +117,12 @@ android {
             if (project.hasProperty('storeFile')) {
                 signingConfig signingConfigs.release
             }
+
+            resValue 'string', 'maps_v2_apikey', 'リリース用の証明書に対応するAPIキーをここに書く'
+        }
+
+        debug {
+            resValue 'string', 'maps_v2_apikey', 'デバッグ用の証明書に対応するAPIキーをここに書く'
         }
     }
 
