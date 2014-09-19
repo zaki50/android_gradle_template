@@ -26,10 +26,9 @@
              キーは MyTemplate/build.gradle に記述する -->
         <!-- API キーは Google APIs Console https://code.google.com/apis/console から取得する。
              詳しくは https://developers.google.com/maps/documentation/android/start?hl=ja#the_google_maps_api_key を参照。 -->
-        <!--suppress AndroidDomInspection -->
         <meta-data
                 android:name="com.google.android.maps.v2.API_KEY"
-                android:value="@string/maps_v2_apikey"/>
+                android:value="${maps_v2_apikey}"/>
 
         <!-- Google Play Services を使う際に必要な設定 http://developer.android.com/google/play-services/setup.html -->
         <meta-data android:name="com.google.android.gms.version"
