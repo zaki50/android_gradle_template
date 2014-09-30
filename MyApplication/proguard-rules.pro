@@ -30,8 +30,23 @@
 -keep class **$$ViewInjector { *; }
 -keepnames class * { @butterknife.InjectView *;}
 
-# for dagger compiler
+# for dagger
 -dontwarn dagger.internal.codegen.**
+-keepclassmembers,allowobfuscation class * {
+    @javax.inject.* *;
+    @dagger.* *;
+    <init>();
+}
+-keep class dagger.** { *; }
+-keep interface dagger.** { *; }
+-keep class javax.inject.* { *; }
+-keep class * extends dagger.internal.Binding
+-keep class * extends dagger.internal.ModuleAdapter
+-keep class * extends dagger.internal.StaticInjection
+-keep class **$$ModuleAdapter
+-keep class **$$InjectAdapter
+-keep class **$$StaticInjection
+-keepnames class * { @javax.inject.Inject *;}
 
 # for EventBus
 -keepclassmembers class ** {
