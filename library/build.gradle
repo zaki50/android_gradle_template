@@ -9,9 +9,17 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
+    defaultPublishConfig "libRelease"
+    publishNonDefault true
+
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 19
+    }
+
+    productFlavors {
+        // flavor を定義しないと、app から debug/release を指定して依存を記述できないので。
+        lib
     }
 
     compileOptions {
