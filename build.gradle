@@ -32,15 +32,16 @@ subprojects {
 
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
-    compileSdkVersion = 19
-    buildToolsVersion = "20.0.0"
+    compileSdkVersion = 21
+    buildToolsVersion = "21.0.0"
 
     // see http://tools.android.com/tech-docs/new-build-system/tips#TOC-Improving-Build-Server-performance.
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
     preDexLibs = !project.hasProperty('disablePreDex')
 
-    supportPackageVersion = '20.0.+' // '21.0.+'
-    playServicesVersion = "6.1.11"
+    supportPackageVersion = '21.0.+'
+    supportWearableVersion = '1.0.0'
+    playServicesVersion = '6.1.11'
     androidMapsUtils = '0.3.+'
     butterKnifeVersion = '5.1.1'
     daggerVersion = "1.2.1"
