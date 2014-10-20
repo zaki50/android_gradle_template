@@ -71,8 +71,8 @@ android {
         targetSdkVersion 21
 
         // support renderscript を使う場合
-        //renderscriptTargetApi 19
-        //renderscriptSupportMode true
+        // renderscriptTargetApi 21
+        // renderscriptSupportMode true
 
         versionCode 1
         versionName '0.0.1'
