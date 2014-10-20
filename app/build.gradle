@@ -76,6 +76,18 @@ android {
 
         versionCode 1
         versionName '0.0.1'
+
+        // ndk を使用する際の設定。
+        // local.properties に ndk.dir=/path/to/ndk の記述を行う必要あり
+        // ndk 関連のファイルは例えば app/src/main/jni/ の下に置く
+        // 使用するクラスで System.loadLibrary("native_library"); するのをわすれずに
+
+        // ndk {
+        //     moduleName "native_library"
+        //     stl "gnustl_shared"
+        //     abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'mips'
+        //     ldLibs "log"
+        // }
     }
 
     compileOptions {
@@ -125,31 +137,6 @@ android {
         debug {
             manifestPlaceholders = [maps_v2_apikey: 'デバッグ用の証明書に対応するAPIキーをここに書く']
         }
-    }
-
-    task ndkBuild(type:Exec) {
-        commandLine 'ndk-build', '-j'
-    }
-
-    task ndkClean(type:Exec) {
-        commandLine 'ndk-build', 'clean'
-    }
-
-    task libsClean(type:Exec) {
-        commandLine 'rm', '-rf', 'libs/armeabi', 'libs/armeabi-v7a', 'libs/x86', 'libs/mips'
-    }
-
-    if(new File(projectDir, "jni").exists()){
-        tasks.withType(Compile) {
-            compileTask -> compileTask.dependsOn ndkBuild
-        }
-
-        tasks.withType(com.android.build.gradle.tasks.PackageApplication) {
-            pkgTask -> pkgTask.jniDir new File(projectDir, 'libs')
-        }
-
-        clean.dependsOn 'ndkClean'
-        clean.dependsOn 'libsClean'
     }
 }
 
