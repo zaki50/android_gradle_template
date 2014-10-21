@@ -39,19 +39,19 @@ project.ext {
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
     preDexLibs = !project.hasProperty('disablePreDex')
 
-    supportPackageVersion = '21.0.+'
+    supportPackageVersion = '21.0.0'
     supportWearableVersion = '1.0.0'
     playServicesVersion = '6.1.11'
-    androidMapsUtils = '0.3.+'
-    butterKnifeVersion = '5.1.1'
+    androidMapsUtils = '0.3.1'
+    butterKnifeVersion = '5.1.2'
     daggerVersion = '1.2.1'
     androidAnnotationsVersion = '3.0.1'
     eventbusVersion = '2.2.+'
     nineOldAndroidsVersion = '2.4.0'
     commonsLangVersion = '3.3.2'
     commonsIoVersion = '2.4'
-    guavaVersion = '17.0'
-    jppVersion = '1.6.+'
+    guavaVersion = '18.0'
+    jppVersion = '1.6.2'
     googleApiClientVersion = '1.18.0-rc'
 }
 
