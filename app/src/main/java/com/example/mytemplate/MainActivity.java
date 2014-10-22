@@ -1,10 +1,16 @@
 package com.example.mytemplate;
 
-import android.app.Activity;
 import android.os.Bundle;
-import butterknife.ButterKnife;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 
-public class MainActivity extends Activity {
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
+public class MainActivity extends ActionBarActivity {
+
+    @InjectView(R.id.toolbar)
+    Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,5 +19,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.inject(this);
+
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            // アプリアイコンを左上に表示するのは API 21 から非推奨。どうしてみやりたければ ロゴとして出す
+            // mToolbar.setLogo(R.drawable.ic_launcher);
+        }
     }
 }
