@@ -33,7 +33,7 @@ subprojects {
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
     compileSdkVersion = 21
-    buildToolsVersion = '21.0.1'
+    buildToolsVersion = '21.0.2'
 
     // see http://tools.android.com/tech-docs/new-build-system/tips#TOC-Improving-Build-Server-performance.
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
