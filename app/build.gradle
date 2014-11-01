@@ -77,7 +77,8 @@ android {
 
         // support renderscript を使う場合
         // renderscriptTargetApi 21
-        // renderscriptSupportMode true
+        // irenderscriptSupportModeEnabled true
+        // renderscriptNdkModeEnabled false
 
         versionCode 1
         versionName '0.0.1'
@@ -128,9 +129,15 @@ android {
 
     buildTypes {
         release {
-            runProguard true
+            minifyEnabled true
+            shrinkResources = true // minifyEnabled true の指定必須
             proguardFile getDefaultProguardFile('proguard-android.txt')
             proguardFile file('proguard-rules.pro')
+
+            multiDexEnabled = false
+
+            jniDebuggable = false
+            renderscriptDebuggable = false
 
             // gradle.properties にリリース署名用の設定があれば署名を有効化します。設定のサンプルとして gradle.properties.forReleaseSigning を置いたので参考にしてください。
             if (project.hasProperty('storeFile')) {
@@ -141,6 +148,12 @@ android {
         }
 
         debug {
+
+            multiDexEnabled = true
+
+            jniDebuggable false
+            renderscriptDebuggable false
+
             manifestPlaceholders = [maps_v2_apikey: 'デバッグ用の証明書に対応するAPIキーをここに書く']
         }
     }
