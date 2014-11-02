@@ -16,7 +16,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            shrinkResources = true // minifyEnabled true の指定も必要です
+            shrinkResources = false // minifyEnabled true の指定も必要です
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
