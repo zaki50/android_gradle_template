@@ -77,7 +77,8 @@ android {
 
         // support renderscript を使う場合
         // renderscriptTargetApi 21
-        // irenderscriptSupportModeEnabled true
+        // renderscriptOptimLevel 3
+        // renderscriptSupportModeEnabled true
         // renderscriptNdkModeEnabled false
 
         versionCode 1
