@@ -172,3 +172,11 @@ if (project.hasProperty('keyAlias')) {
 if (project.hasProperty('keyPassword')) {
     android.signingConfigs.release.keyPassword = keyPassword
 }
+
+// IDE からのビルドと、コマンドラインからのビルドで処理を分けたい場合の書き方
+// Android Studio からのビルドでは、コマンドラインオプションに -Pandroid.injected.invoked.from.ide=true が渡される
+def isIdeBuild = project.properties['android.injected.invoked.from.ide']
+if (isIdeBuild == null || isIdeBuild.equalsIgnoreCase("true")) {
+    // do something for ide build
+}
+
