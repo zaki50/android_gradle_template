@@ -63,7 +63,7 @@ dependencies {
 // for Android Annotations
 android.applicationVariants.all { variant ->
     variant.javaCompile.options.compilerArgs += [
-            '-AandroidManifestFile=' + variant.processResources.manifestFile
+            '-AandroidManifestFile=' + variant.outputs.get(0).processManifest.manifestOutputFile
     ]
 }
 
@@ -131,7 +131,7 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            shrinkResources = true // minifyEnabled true の指定必須
+            shrinkResources false // minifyEnabled true の指定必須
             proguardFile getDefaultProguardFile('proguard-android.txt')
             proguardFile file('proguard-rules.pro')
 
