@@ -135,10 +135,10 @@ android {
             proguardFile getDefaultProguardFile('proguard-android.txt')
             proguardFile file('proguard-rules.pro')
 
-            multiDexEnabled = false
+            multiDexEnabled false
 
-            jniDebuggable = false
-            renderscriptDebuggable = false
+            jniDebuggable false
+            renderscriptDebuggable false
 
             // gradle.properties にリリース署名用の設定があれば署名を有効化します。設定のサンプルとして gradle.properties.forReleaseSigning を置いたので参考にしてください。
             if (project.hasProperty('storeFile')) {
@@ -150,7 +150,7 @@ android {
 
         debug {
 
-            multiDexEnabled = true
+            multiDexEnabled false
 
             jniDebuggable false
             renderscriptDebuggable false
