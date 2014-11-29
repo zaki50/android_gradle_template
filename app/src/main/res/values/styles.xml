@@ -18,6 +18,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <!-- その他の色のカスタマイズについては https://developer.android.com/training/material/theme.html 参照 -->
+        <!-- また、 http://android-developers.blogspot.de/2014/10/appcompat-v21-material-design-for-pre.html も読んだほうがいい -->
 
         <!-- Toolbar を使用するので ActionBar、 タイトルバーは非表示に -->
         <item name="android:windowNoTitle">true</item>
