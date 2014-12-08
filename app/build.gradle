@@ -30,8 +30,43 @@ dependencies {
     apt "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
 
     compile "de.greenrobot:eventbus:${eventbusVersion}"
-    //noinspection GradleDependency
+
+    // Google Play Services 全体を取り込む場合はこちらを。一部機能だけ取り込む場合はコメントアウトし、下から必要な物を有効化
     compile "com.google.android.gms:play-services:${playServicesVersion}"
+
+    // Google Play Services の機能分割版
+    // Google Plus
+    //compile "com.google.android.gms:play-services-plus:${playServicesVersion}"
+    // Google Account Login
+    //compile "com.google.android.gms:play-services-identity:${playServicesVersion}"
+    // Google Activity Recognition
+    //compile "com.google.android.gms:play-services-location:${playServicesVersion}"
+    // Google App Indexing
+    //compile "com.google.android.gms:play-services-appindexing:${playServicesVersion}"
+    // Google Cast
+    //compile "com.google.android.gms:play-services-cast:${playServicesVersion}"
+    // Google Drive
+    //compile "com.google.android.gms:play-services-drive:${playServicesVersion}"
+    // Google Fit
+    //compile "com.google.android.gms:play-services-fitness:${playServicesVersion}"
+    // Google Maps
+    //compile "com.google.android.gms:play-services-maps:${playServicesVersion}"
+    // Google Mobile Ads
+    //compile "com.google.android.gms:play-services-ads:${playServicesVersion}"
+    // Google Panorama Viewer
+    //compile "com.google.android.gms:play-services-panorama:${playServicesVersion}"
+    // Google Play Game services
+    //compile "com.google.android.gms:play-services-games:${playServicesVersion}"
+    // Google Wallet
+    //compile "com.google.android.gms:play-services-wallet:${playServicesVersion}"
+    // Android Wear
+    //compile "com.google.android.gms:play-services-wearable:${playServicesVersion}"
+    // Google Actions
+    // Google Analytics
+    // Google Cloud Messaging
+    //compile "com.google.android.gms:play-services-base:${playServicesVersion}"
+
+
     // http://googlemaps.github.io/android-maps-utils/
     compile "com.google.maps.android:android-maps-utils:${androidMapsUtils}"
 
