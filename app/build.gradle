@@ -91,6 +91,8 @@ dependencies {
     debugCompile project(path: ':library', configuration: 'libDebug')
     releaseCompile project(path: ':library', configuration: 'libRelease')
 
+    androidTestCompile "com.android.support.test:testing-support-lib:${testingSupportPackageVersion}"
+
     // android wear 用のアプリを handheld アプリに埋め込む
     wearApp project(':wear')
 }
@@ -119,6 +121,9 @@ android {
         versionCode 1
         versionName '0.0.1'
 
+        // test support libの JUnitRunner
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
         // ndk を使用する際の設定。
         // local.properties に ndk.dir=/path/to/ndk の記述を行う必要あり
         // ndk 関連のファイルは例えば app/src/main/jni/ の下に置く
@@ -144,6 +149,9 @@ android {
         // pickFirst なら最初に見つけたやつが apk に入る
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
+
+        // for testing support lib
+        exclude 'LICENSE.txt'
     }
 
     signingConfigs {

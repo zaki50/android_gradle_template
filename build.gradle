@@ -42,6 +42,7 @@ project.ext {
 
     supportPackageVersion = '21.0.3'
     supportWearableVersion = '1.1.0'
+    testingSupportPackageVersion = '0.1'
     playServicesVersion = '6.5.87'
     androidMapsUtils = '0.3.3'
     butterKnifeVersion = '6.0.0'

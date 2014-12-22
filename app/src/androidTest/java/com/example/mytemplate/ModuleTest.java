@@ -1,19 +1,20 @@
 
 package com.example.mytemplate;
 
+import org.junit.Before;
+import org.junit.Test;
+
 import javax.inject.Inject;
 
-import android.test.AndroidTestCase;
 import dagger.Module;
 import dagger.ObjectGraph;
 import dagger.Provides;
 
-import java.lang.AssertionError;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.notNullValue;
+import static org.junit.Assert.assertThat;
 
-/**
- * Created by masui on 10/12/13.
- */
-public class ModuleTest extends AndroidTestCase {
+public class ModuleTest {
 
     @Module(injects = ModuleTest.class)
     static final class MyModule {
@@ -27,14 +28,14 @@ public class ModuleTest extends AndroidTestCase {
     @Inject
     SampleModel mSampleModel;
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
+    @Before
+    public void setUp() throws Exception {
         ObjectGraph.create(new MyModule())
                    .inject(this);
     }
 
+    @Test
     public void testThatDependencyIsInjected() {
-        assertNotNull(mSampleModel);
+        assertThat(mSampleModel, is(notNullValue()));
     }
 }
