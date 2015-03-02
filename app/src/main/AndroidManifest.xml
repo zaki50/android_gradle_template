@@ -18,12 +18,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:name=".MyApplication"
         android:theme="@style/AppTheme" >
         <!-- Maps v2 API キーの設定。
              キーは MyTemplate/build.gradle に記述する -->
+        <!-- API キーは Google APIs Console https://code.google.com/apis/console から取得する。
+             詳しくは https://developers.google.com/maps/documentation/android/start?hl=ja#the_google_maps_api_key を参照。 -->
         <meta-data
                 android:name="com.google.android.maps.v2.API_KEY"
                 android:value="${maps_v2_apikey}"/>
@@ -40,22 +42,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:scheme="testapp"
-                    android:host="foo"
-                    android:pathPrefix="/bar"
-                    />
-                <data
-                    android:host="hoge"
-                android:pathPrefix="/fuga"
-                android:scheme="https" />
-            </intent-filter>        </activity>
+        </activity>
     </application>
 
 </manifest>
