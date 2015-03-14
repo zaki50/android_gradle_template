@@ -48,7 +48,7 @@ project.ext {
     butterKnifeVersion = '6.1.0'
     daggerVersion = '1.2.1'
     androidAnnotationsVersion = '3.0.1'
-    eventbusVersion = '2.2.+'
+    eventbusVersion = '2.4.0'
     nineOldAndroidsVersion = '2.4.0'
     commonsLangVersion = '3.3.2'
     commonsIoVersion = '2.4'
