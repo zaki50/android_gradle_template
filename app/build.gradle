@@ -32,6 +32,10 @@ dependencies {
     compile "de.greenrobot:eventbus:${eventbusVersion}"
 
     // Google Play Services 全体を取り込む場合はこちらを。一部機能だけ取り込む場合はコメントアウトし、下から必要な物を有効化
+    /*
+     * proguard をかけないとメソッド数上限に当たる可能性が高い。
+     * 分割版を使うか、 android.buildTypes.debug.multiDexEnabled を true にするのがおすすめ
+     */
     compile "com.google.android.gms:play-services:${playServicesVersion}"
 
     // Google Play Services の機能分割版
@@ -39,32 +43,40 @@ dependencies {
     //compile "com.google.android.gms:play-services-plus:${playServicesVersion}"
     // Google Account Login
     //compile "com.google.android.gms:play-services-identity:${playServicesVersion}"
-    // Google Activity Recognition
-    //compile "com.google.android.gms:play-services-location:${playServicesVersion}"
-    // Google App Indexing
-    //compile "com.google.android.gms:play-services-appindexing:${playServicesVersion}"
-    // Google Cast
-    //compile "com.google.android.gms:play-services-cast:${playServicesVersion}"
-    // Google Drive
-    //compile "com.google.android.gms:play-services-drive:${playServicesVersion}"
-    // Google Fit
-    //compile "com.google.android.gms:play-services-fitness:${playServicesVersion}"
-    // Google Maps
-    //compile "com.google.android.gms:play-services-maps:${playServicesVersion}"
-    // Google Mobile Ads
-    //compile "com.google.android.gms:play-services-ads:${playServicesVersion}"
-    // Google Panorama Viewer
-    //compile "com.google.android.gms:play-services-panorama:${playServicesVersion}"
-    // Google Play Game services
-    //compile "com.google.android.gms:play-services-games:${playServicesVersion}"
-    // Google Wallet
-    //compile "com.google.android.gms:play-services-wallet:${playServicesVersion}"
-    // Android Wear
-    //compile "com.google.android.gms:play-services-wearable:${playServicesVersion}"
     // Google Actions
     // Google Analytics
     // Google Cloud Messaging
     //compile "com.google.android.gms:play-services-base:${playServicesVersion}"
+    // Google App Indexing
+    //compile "com.google.android.gms:play-services-appindexing:${playServicesVersion}"
+    // Google Analytics
+    //compile "com.google.android.gms:play-services-analytics:${playServicesVersion}"
+    // Google Cast
+    //compile "com.google.android.gms:play-services-cast:${playServicesVersion}"
+    // Google Cloud Messaging
+    //compile "com.google.android.gms:play-services-gcm:${playServicesVersion}"
+    // Google Drive
+    //compile "com.google.android.gms:play-services-drive:${playServicesVersion}"
+    // Google Fit
+    //compile "com.google.android.gms:play-services-fitness:${playServicesVersion}"
+    // Google Activity Recognition
+    //compile "com.google.android.gms:play-services-location:${playServicesVersion}"
+    // Google Maps
+    //compile "com.google.android.gms:play-services-maps:${playServicesVersion}"
+    // Google Mobile Ads
+    //compile "com.google.android.gms:play-services-ads:${playServicesVersion}"
+    // Google Nearby
+    //compile "com.google.android.gms:play-services-nearby:${playServicesVersion}"
+    // Google Panorama Viewer
+    //compile "com.google.android.gms:play-services-panorama:${playServicesVersion}"
+    // Google Play Game services
+    //compile "com.google.android.gms:play-services-games:${playServicesVersion}"
+    // SafetyNet
+    //compile "com.google.android.gms:play-services-wallet:${playServicesVersion}"
+    // Google Wallet
+    //compile "com.google.android.gms:play-services-wallet:${playServicesVersion}"
+    // Android Wear
+    //compile "com.google.android.gms:play-services-wearable:${playServicesVersion}"
 
 
     // http://googlemaps.github.io/android-maps-utils/
