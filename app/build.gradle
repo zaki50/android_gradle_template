@@ -36,7 +36,7 @@ dependencies {
      * proguard をかけないとメソッド数上限に当たる可能性が高い。
      * 分割版を使うか、 android.buildTypes.debug.multiDexEnabled を true にするのがおすすめ
      */
-    compile "com.google.android.gms:play-services:${playServicesVersion}"
+    //compile "com.google.android.gms:play-services:${playServicesVersion}"
 
     // Google Play Services の機能分割版
     // Google Plus
@@ -62,7 +62,7 @@ dependencies {
     // Google Activity Recognition
     //compile "com.google.android.gms:play-services-location:${playServicesVersion}"
     // Google Maps
-    //compile "com.google.android.gms:play-services-maps:${playServicesVersion}"
+    compile "com.google.android.gms:play-services-maps:${playServicesVersion}"
     // Google Mobile Ads
     //compile "com.google.android.gms:play-services-ads:${playServicesVersion}"
     // Google Nearby
