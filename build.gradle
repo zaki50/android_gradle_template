@@ -60,6 +60,7 @@ project.ext {
     rxjavaVersion = '1.0.9'
     rxandroidVersion = '0.24.0'
     stethoVersion = '1.1.0'
+    bundlesVersion = '1.0.3'
 }
 
 task wrapper(type: Wrapper) {

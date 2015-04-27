@@ -2,6 +2,13 @@ apply plugin: 'android-sdk-manager'
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 
+repositories {
+    maven {
+        // for com.neenbedankt.bundles:bundles
+        url  'https://github.com/zaki50/bundles_maven_repo/raw/master/maven_repo'
+    }
+}
+
 dependencies {
 
     compile "com.nineoldandroids:library:${nineOldAndroidsVersion}"
@@ -39,6 +46,8 @@ dependencies {
 
     compile "io.reactivex:rxjava:${rxjavaVersion}"
     compile "io.reactivex:rxjava:${rxandroidVersion}"
+
+    compile "com.neenbedankt.bundles:bundles:${bundlesVersion}"
 
     // Google Play Services 全体を取り込む場合はこちらを。一部機能だけ取り込む場合はコメントアウトし、下から必要な物を有効化
     /*
