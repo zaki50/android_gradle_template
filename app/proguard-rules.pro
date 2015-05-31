@@ -70,3 +70,6 @@
 }
 -keepattributes Signature
 -keepattributes *Annotation*
+
+# for Bundles
+-dontwarn com.neenbedankt.bundles.processor.**
