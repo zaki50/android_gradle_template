@@ -12,6 +12,8 @@ android {
     defaultPublishConfig "libRelease"
     publishNonDefault true
 
+    resourcePrefix 'mylib_'
+
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 21
