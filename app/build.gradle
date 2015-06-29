@@ -217,6 +217,9 @@ android {
                 signingConfig signingConfigs.release
             }
 
+            //API キーは Google APIs Console https://code.google.com/apis/console から取得する。
+            // 詳しくは https://developers.google.com/maps/documentation/android/start?hl=ja#the_google_maps_api_key を参照。
+            // ex. $ keytool -list -v -keystore ~/.android/release.jks -alias release
             manifestPlaceholders = [maps_v2_apikey: 'リリース用の証明書に対応するAPIキーをここに書く']
         }
 
