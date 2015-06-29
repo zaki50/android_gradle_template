@@ -5,12 +5,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 public class MainActivity extends ActionBarActivity {
 
-    @InjectView(R.id.toolbar)
+    @Bind(R.id.toolbar)
     Toolbar mToolbar;
 
     @Override
@@ -19,7 +19,7 @@ public class MainActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_main);
 
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);

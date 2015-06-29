@@ -45,7 +45,7 @@ project.ext {
     testingSupportPackageVersion = '0.1'
     playServicesVersion = '7.5.0'
     androidMapsUtils = '0.3.4'
-    butterKnifeVersion = '6.1.0'
+    butterKnifeVersion = '7.0.0'
     daggerVersion = '1.2.1'
     androidAnnotationsVersion = '3.0.1'
     eventbusVersion = '2.4.0'
