@@ -41,7 +41,7 @@ project.ext {
     preDexLibs = !project.hasProperty('disablePreDex')
 
     supportPackageVersion = '22.2.0'
-    supportWearableVersion = '1.1.0'
+    supportWearableVersion = '1.2.0'
     testingSupportPackageVersion = '0.1'
     playServicesVersion = '7.5.0'
     androidMapsUtils = '0.3.4'

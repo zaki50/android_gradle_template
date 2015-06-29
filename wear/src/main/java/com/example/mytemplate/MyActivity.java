@@ -1,11 +1,11 @@
 package com.example.mytemplate;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.WatchViewStub;
 import android.widget.TextView;
 
-public class MyActivity extends Activity {
+public class MyActivity extends WearableActivity {
 
     private TextView mTextView;
 

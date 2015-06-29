@@ -3,20 +3,20 @@ apply plugin: 'com.android.application'
 
 
 android {
-    compileSdkVersion 20
+    compileSdkVersion 22
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "com.example.mytemplate"
-        minSdkVersion 20
-        targetSdkVersion 20
+        minSdkVersion 22
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
         release {
             minifyEnabled false
-            shrinkResources = false // minifyEnabled true の指定も必要です
+            shrinkResources = false // true にする場合は minifyEnabled true の指定も必要です
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
