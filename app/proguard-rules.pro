@@ -81,3 +81,6 @@
 
 # for Bundles
 -dontwarn com.neenbedankt.bundles.processor.**
+
+# for stetho
+-keep class com.facebook.stetho.**{ *; }
