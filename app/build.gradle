@@ -16,6 +16,7 @@ dependencies {
     compile "com.android.support:support-v13:${supportPackageVersion}"
     compile "com.android.support:appcompat-v7:${supportPackageVersion}"
     compile "com.android.support:design:${supportPackageVersion}"
+    compile "com.android.support:percent:${supportPackageVersion}"
     //compile "com.android.support:leanback-v17:${supportPackageVersion}"
     //compile "com.android.support:recyclerview-v7:${supportPackageVersion}"
     //compile "com.android.support:gridlayout-v7:${supportPackageVersion}"
@@ -49,6 +50,9 @@ dependencies {
     compile "io.reactivex:rxjava:${rxandroidVersion}"
 
     compile "com.neenbedankt.bundles:bundles:${bundlesVersion}"
+
+    compile "se.emilsjolander:intentbuilder-api:${intentBuilderVersion}"
+    apt "se.emilsjolander:intentbuilder-compiler:${intentBuilderVersion}"
 
     // Google Play Services 全体を取り込む場合はこちらを。一部機能だけ取り込む場合はコメントアウトし、下から必要な物を有効化
     /*
