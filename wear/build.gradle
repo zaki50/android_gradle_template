@@ -25,5 +25,6 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.google.android.support:wearable:${supportWearableVersion}"
+    provided "com.google.android.wearable:wearable:${googleWearableVersion}"
     compile "com.google.android.gms:play-services-wearable:${playServicesVersion}"
 }

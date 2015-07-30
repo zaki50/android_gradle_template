@@ -6,9 +6,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.android.tools.build:gradle:1.3.0'
         classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.0'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.5.1'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.6'
     }
 }
 
@@ -41,8 +41,9 @@ project.ext {
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
     preDexLibs = !project.hasProperty('disablePreDex')
 
-    supportPackageVersion = '22.2.0'
+    supportPackageVersion = '22.2.1'
     supportWearableVersion = '1.2.0'
+    googleWearableVersion = '1.0.0'
     testingSupportPackageVersion = '0.1'
     playServicesVersion = '7.5.0'
     androidMapsUtils = '0.3.4'
