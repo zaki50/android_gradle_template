@@ -16,7 +16,7 @@ dependencies {
     compile "com.android.support:support-v13:${supportPackageVersion}"
     compile "com.android.support:appcompat-v7:${supportPackageVersion}"
     compile "com.android.support:design:${supportPackageVersion}"
-    compile "com.android.support:percent:${supportPackageVersion}"
+    compile "com.android.support:percent:${supportPercentPackageVersion}"
     //compile "com.android.support:leanback-v17:${supportPackageVersion}"
     //compile "com.android.support:recyclerview-v7:${supportPackageVersion}"
     //compile "com.android.support:gridlayout-v7:${supportPackageVersion}"
