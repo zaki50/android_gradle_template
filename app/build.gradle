@@ -95,11 +95,19 @@ dependencies {
     // Google Play Game services
     //compile "com.google.android.gms:play-services-games:${playServicesVersion}"
     // SafetyNet
-    //compile "com.google.android.gms:play-services-wallet:${playServicesVersion}"
+    //compile "com.google.android.gms:play-services-safetynet:${playServicesVersion}"
     // Google Wallet
     //compile "com.google.android.gms:play-services-wallet:${playServicesVersion}"
+    // Android Vision
+    //compile "com.google.android.gms:play-services-vision:${playServicesVersion}"
+    // Android App Invite
+    //compile "com.google.android.gms:play-services-appinvite:${playServicesVersion}"
+    // Android App State
+    //compile "com.google.android.gms:play-services-appstate:${playServicesVersion}"
     // Android Wear
     //compile "com.google.android.gms:play-services-wearable:${playServicesVersion}"
+    // Android All Wear
+    //compile "com.google.android.gms:play-services-all-wear:${playServicesVersion}"
 
 
     // http://googlemaps.github.io/android-maps-utils/
