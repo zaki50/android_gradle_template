@@ -15,12 +15,24 @@ package com.example.mytemplate.prngfix;
   SecureRandom が適切に初期化されていない問題への対処。
  */
 
-
 import android.os.Build;
 import android.os.Process;
+import android.util.Log;
 
-import java.io.*;
-import java.security.*;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+import java.security.Provider;
+import java.security.SecureRandom;
+import java.security.SecureRandomSpi;
+import java.security.Security;
 
 /**
  * Fixes for the output of the default PRNG having low entropy.
@@ -154,7 +166,7 @@ public final class PRNGFixes {
     }
 
     /**
-     * {@link java.security.SecureRandomSpi} which passes all requests to the Linux PRNG
+     * {@link SecureRandomSpi} which passes all requests to the Linux PRNG
      * ({@code /dev/urandom}).
      */
     public static class LinuxPRNGSecureRandom extends SecureRandomSpi {
@@ -181,7 +193,6 @@ public final class PRNGFixes {
          *
          * @GuardedBy("sLock")
          */
-        @SuppressWarnings("JavaDoc")
         private static DataInputStream sUrandomIn;
 
         /**
@@ -190,7 +201,6 @@ public final class PRNGFixes {
          *
          * @GuardedBy("sLock")
          */
-        @SuppressWarnings("JavaDoc")
         private static OutputStream sUrandomOut;
 
         /**
@@ -209,10 +219,13 @@ public final class PRNGFixes {
                 }
                 out.write(bytes);
                 out.flush();
-                mSeeded = true;
             } catch (IOException e) {
-                throw new SecurityException(
-                        "Failed to mix seed into " + URANDOM_FILE, e);
+                // On a small fraction of devices /dev/urandom is not writable.
+                // Log and ignore.
+                Log.w(PRNGFixes.class.getSimpleName(),
+                        "Failed to mix seed into " + URANDOM_FILE);
+            } finally {
+                mSeeded = true;
             }
         }
 
@@ -264,15 +277,10 @@ public final class PRNGFixes {
             }
         }
 
-        private OutputStream getUrandomOutputStream() {
+        private OutputStream getUrandomOutputStream() throws IOException {
             synchronized (sLock) {
                 if (sUrandomOut == null) {
-                    try {
-                        sUrandomOut = new FileOutputStream(URANDOM_FILE);
-                    } catch (IOException e) {
-                        throw new SecurityException("Failed to open "
-                                + URANDOM_FILE + " for writing", e);
-                    }
+                    sUrandomOut = new FileOutputStream(URANDOM_FILE);
                 }
                 return sUrandomOut;
             }
