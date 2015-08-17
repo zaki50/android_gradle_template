@@ -151,7 +151,7 @@ android {
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 21
+        targetSdkVersion 23
 
         // support renderscript を使う場合
         // renderscriptTargetApi 21
