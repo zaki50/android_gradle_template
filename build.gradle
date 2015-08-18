@@ -41,8 +41,8 @@ project.ext {
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
     preDexLibs = !project.hasProperty('disablePreDex')
 
-    supportPackageVersion = '22.2.1'
-    supportPercentPackageVersion = '22.2.0'
+    supportPackageVersion = '23.0.0'
+    supportPercentPackageVersion = '23.0.0'
     supportWearableVersion = '1.2.0'
     googleWearableVersion = '1.0.0'
     testingSupportPackageVersion = '0.1'
@@ -60,11 +60,11 @@ project.ext {
     okioVersion = '1.5.0'
     okhttpVersion = '2.4.0'
     retrofitVersion = '1.9.0'
-    rxjavaVersion = '1.0.12'
+    rxjavaVersion = '1.0.14'
     rxandroidVersion = '0.25.0'
     stethoVersion = '1.1.1'
     bundlesVersion = '1.0.3'
-    intentBuilderVersion = '0.13.0'
+    intentBuilderVersion = '0.14.0'
 }
 
 task wrapper(type: Wrapper) {
