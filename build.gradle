@@ -68,5 +68,5 @@ project.ext {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.4'
+    gradleVersion = '2.5'
 }
