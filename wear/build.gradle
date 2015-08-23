@@ -2,6 +2,11 @@ apply plugin: 'android-sdk-manager'
 apply plugin: 'com.android.application'
 
 
+project.ext {
+    supportWearableVersion = '1.3.0'
+    googleWearableVersion = '1.0.0'
+}
+
 android {
     compileSdkVersion 22
     buildToolsVersion rootProject.ext.buildToolsVersion

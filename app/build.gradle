@@ -11,12 +11,10 @@ repositories {
 
 dependencies {
 
-    compile "com.nineoldandroids:library:${nineOldAndroidsVersion}"
-
     compile "com.android.support:support-v13:${supportPackageVersion}"
     compile "com.android.support:appcompat-v7:${supportPackageVersion}"
     compile "com.android.support:design:${supportPackageVersion}"
-    compile "com.android.support:percent:${supportPercentPackageVersion}"
+    compile "com.android.support:percent:${supportPackageVersion}"
     //compile "com.android.support:leanback-v17:${supportPackageVersion}"
     //compile "com.android.support:recyclerview-v7:${supportPackageVersion}"
     //compile "com.android.support:gridlayout-v7:${supportPackageVersion}"
@@ -25,34 +23,34 @@ dependencies {
     //compile "com.android.support:cardview-v7:${supportPackageVersion}"
     compile "com.android.support:support-annotations:${supportPackageVersion}"
 
-    compile "com.jakewharton:butterknife:${butterKnifeVersion}"
-    apt "com.jakewharton:butterknife:${butterKnifeVersion}"
+    compile "com.jakewharton:butterknife:7.0.1"
+    apt "com.jakewharton:butterknife:7.0.1"
 
     // Butter Knife ではなく、 Android Annotations を使う場合はこちら
-    //compile "org.androidannotations:androidannotations-api:${project.androidAnnotationsVersion}"
-    //apt "org.androidannotations:androidannotations:${project.androidAnnotationsVersion}"
+    //compile "org.androidannotations:androidannotations-api:3.0.1"
+    //apt "org.androidannotations:androidannotations:3.0.1"
 
-    compile "com.squareup.dagger:dagger:${project.daggerVersion}"
-    apt "com.squareup.dagger:dagger-compiler:${project.daggerVersion}"
+    compile "com.squareup.dagger:dagger:1.2.2"
+    apt "com.squareup.dagger:dagger-compiler:1.2.2"
 
-    compile "net.vvakame:jsonpullparser-core:${project.jppVersion}"
-    apt "net.vvakame:jsonpullparser-apt:${project.jppVersion}"
+    compile "net.vvakame:jsonpullparser-core:1.6.2"
+    apt "net.vvakame:jsonpullparser-apt:1.6.2"
 
-    compile "de.greenrobot:eventbus:${eventbusVersion}"
+    compile "de.greenrobot:eventbus:2.4.0"
 
-    compile "com.squareup.okio:okio:${okioVersion}"
-    compile "com.squareup.okhttp:okhttp:${okhttpVersion}"
-    compile "com.squareup.okhttp:okhttp-urlconnection:${okhttpVersion}"
+    compile "com.squareup.okio:okio:1.5.0"
+    compile "com.squareup.okhttp:okhttp:2.4.0"
+    compile "com.squareup.okhttp:okhttp-urlconnection:2.4.0"
 
-    compile "com.squareup.retrofit:retrofit:${retrofitVersion}"
+    compile "com.squareup.retrofit:retrofit:1.9.0"
 
-    compile "io.reactivex:rxjava:${rxjavaVersion}"
-    compile "io.reactivex:rxjava:${rxandroidVersion}"
+    compile "io.reactivex:rxjava:1.0.14"
+    compile "io.reactivex:rxandroid:1.0.1"
 
-    compile "com.neenbedankt.bundles:bundles:${bundlesVersion}"
+    compile "com.neenbedankt.bundles:bundles:1.0.3"
 
-    compile "se.emilsjolander:intentbuilder-api:${intentBuilderVersion}"
-    apt "se.emilsjolander:intentbuilder-compiler:${intentBuilderVersion}"
+    compile "se.emilsjolander:intentbuilder-api:0.14.0"
+    apt "se.emilsjolander:intentbuilder-compiler:0.14.0"
 
     // Google Play Services 全体を取り込む場合はこちらを。一部機能だけ取り込む場合はコメントアウトし、下から必要な物を有効化
     /*
@@ -111,12 +109,12 @@ dependencies {
 
 
     // http://googlemaps.github.io/android-maps-utils/
-    compile "com.google.maps.android:android-maps-utils:${androidMapsUtils}"
+    compile "com.google.maps.android:android-maps-utils:0.3.4"
 
-    compile "org.apache.commons:commons-lang3:${commonsLangVersion}"
-    compile "commons-io:commons-io:${commonsIoVersion}"
+    compile "org.apache.commons:commons-lang3:3.3.2"
+    compile "commons-io:commons-io:2.4"
 
-    compile("com.google.api-client:google-api-client-android:${googleApiClientVersion}") {
+    compile("com.google.api-client:google-api-client-android:1.20.0") {
         exclude module: 'xpp3'
         exclude module: 'httpclient'
         exclude module: 'junit'
@@ -126,8 +124,8 @@ dependencies {
     // libs/ にある *.jar を一括で追加する
     compile fileTree(dir: 'libs', include: '*.jar')
 
-    debugCompile "com.facebook.stetho:stetho:${stethoVersion}"
-    debugCompile "com.facebook.stetho:stetho-okhttp:${stethoVersion}"
+    debugCompile "com.facebook.stetho:stetho:1.1.1"
+    debugCompile "com.facebook.stetho:stetho-okhttp:1.1.1"
 
     debugCompile project(path: ':library', configuration: 'libDebug')
     releaseCompile project(path: ':library', configuration: 'libRelease')
