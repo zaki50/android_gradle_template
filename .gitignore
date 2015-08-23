@@ -1,5 +1,5 @@
 local.properties
-gradle.properties
+ext.properties
 
 # for gradle, IDEA
 .gradle

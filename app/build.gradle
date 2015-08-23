@@ -1,6 +1,7 @@
 apply plugin: 'android-sdk-manager'
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'ext-properties'
 
 repositories {
     maven {
@@ -222,7 +223,7 @@ android {
             jniDebuggable false
             renderscriptDebuggable false
 
-            // gradle.properties にリリース署名用の設定があれば署名を有効化します。設定のサンプルとして gradle.properties.forReleaseSigning を置いたので参考にしてください。
+            // ext.properties にリリース署名用の設定があれば署名を有効化します。設定のサンプルとして ext.properties.forReleaseSigning を置いたので参考にしてください。
             if (project.hasProperty('storeFile')) {
                 signingConfig signingConfigs.release
             }
