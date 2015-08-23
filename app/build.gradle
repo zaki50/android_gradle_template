@@ -12,11 +12,16 @@ repositories {
 
 dependencies {
 
-    compile "com.android.support:support-v13:${supportPackageVersion}"
+    //compile "com.android.support:support-v4:${supportPackageVersion}"
     compile "com.android.support:appcompat-v7:${supportPackageVersion}"
+    compile "com.android.support:preference-v7:${supportPackageVersion}"
+    //compile "com.android.support:support-v13:${supportPackageVersion}"
+    //compile "com.android.support:preference-v14:${supportPackageVersion}"
     compile "com.android.support:design:${supportPackageVersion}"
     compile "com.android.support:percent:${supportPackageVersion}"
+    //compile "com.android.support:customtabs:${supportPackageVersion}"
     //compile "com.android.support:leanback-v17:${supportPackageVersion}"
+    //compile "com.android.support:preference-leanback-v17:${supportPackageVersion}"
     //compile "com.android.support:recyclerview-v7:${supportPackageVersion}"
     //compile "com.android.support:gridlayout-v7:${supportPackageVersion}"
     //compile "com.android.support:mediarouter-v7:${supportPackageVersion}"
