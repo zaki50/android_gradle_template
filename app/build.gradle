@@ -197,6 +197,10 @@ android {
 
         // for testing support lib
         exclude 'LICENSE.txt'
+
+        exclude 'LICENSE.txt'
+
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
     }
 
     signingConfigs {

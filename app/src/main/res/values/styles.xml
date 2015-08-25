@@ -21,7 +21,7 @@
         <!-- また、 http://android-developers.blogspot.de/2014/10/appcompat-v21-material-design-for-pre.html も読んだほうがいい -->
 
         <!-- Toolbar を使用するので ActionBar、 タイトルバーは非表示に -->
-        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
 
     </style>
