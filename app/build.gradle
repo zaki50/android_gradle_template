@@ -225,6 +225,12 @@ android {
 
             // ext.properties にリリース署名用の設定があれば署名を有効化します。設定のサンプルとして ext.properties.forReleaseSigning を置いたので参考にしてください。
             if (project.hasProperty('storeFile')) {
+
+                android.signingConfigs.release.storeFile = rootProject.file(storeFile)
+                android.signingConfigs.release.storePassword = storePassword
+                android.signingConfigs.release.keyAlias = keyAlias
+                android.signingConfigs.release.keyPassword = keyPassword
+
                 signingConfig signingConfigs.release
             }
 
@@ -235,7 +241,6 @@ android {
         }
 
         debug {
-
             multiDexEnabled false
 
             jniDebuggable false
@@ -246,23 +251,9 @@ android {
     }
 }
 
-if (project.hasProperty('storeFile')) {
-    android.signingConfigs.release.storeFile = file(storeFile)
-}
-if (project.hasProperty('storePassword')) {
-    android.signingConfigs.release.storePassword = storePassword
-}
-if (project.hasProperty('keyAlias')) {
-    android.signingConfigs.release.keyAlias = keyAlias
-}
-if (project.hasProperty('keyPassword')) {
-    android.signingConfigs.release.keyPassword = keyPassword
-}
-
 // IDE からのビルドと、コマンドラインからのビルドで処理を分けたい場合の書き方
 // Android Studio からのビルドでは、コマンドラインオプションに -Pandroid.injected.invoked.from.ide=true が渡される
 def isIdeBuild = project.properties['android.injected.invoked.from.ide']
 if (isIdeBuild == null || isIdeBuild.equalsIgnoreCase("true")) {
     // do something for ide build
 }
-
