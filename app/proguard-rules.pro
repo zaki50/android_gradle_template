@@ -79,8 +79,8 @@
 -keepattributes Signature
 -keepattributes *Annotation*
 
-# for Bundles
--dontwarn com.neenbedankt.bundles.processor.**
+# for FragmentArgs
+-keep class com.hannesdorfmann.fragmentargs.** { *; }
 
 # for stetho
 -keep class com.facebook.stetho.**{ *; }
