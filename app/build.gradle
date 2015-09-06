@@ -32,10 +32,6 @@ dependencies {
     compile "com.jakewharton:butterknife:7.0.1"
     apt "com.jakewharton:butterknife:7.0.1"
 
-    // Butter Knife ではなく、 Android Annotations を使う場合はこちら
-    //compile "org.androidannotations:androidannotations-api:3.0.1"
-    //apt "org.androidannotations:androidannotations:3.0.1"
-
     compile "com.squareup.dagger:dagger:1.2.2"
     apt "com.squareup.dagger:dagger-compiler:1.2.2"
 
@@ -142,13 +138,6 @@ dependencies {
 
     // android wear 用のアプリを handheld アプリに埋め込む
     wearApp project(':wear')
-}
-
-// for Android Annotations
-android.applicationVariants.all { variant ->
-    variant.javaCompile.options.compilerArgs += [
-            '-AandroidManifestFile=' + variant.outputs.get(0).processManifest.manifestOutputFile
-    ]
 }
 
 android {
