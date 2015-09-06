@@ -3,13 +3,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'ext-properties'
 
-repositories {
-    maven {
-        // for com.neenbedankt.bundles:bundles
-        url  'https://github.com/zaki50/bundles_maven_repo/raw/master/maven_repo'
-    }
-}
-
 dependencies {
 
     //compile "com.android.support:support-v4:${supportPackageVersion}"
