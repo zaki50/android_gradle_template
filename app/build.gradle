@@ -231,6 +231,9 @@ android {
             // 詳しくは https://developers.google.com/maps/documentation/android/start?hl=ja#the_google_maps_api_key を参照。
             // ex. $ keytool -list -v -keystore ~/.android/release.jks -alias release
             manifestPlaceholders = [maps_v2_apikey: 'リリース用の証明書に対応するAPIキーをここに書く']
+
+            // BuildConfig.DEBUG は compile-time constant ではないので、別途定義する
+            buildConfigField "boolean", "DEBUG_COMPILE", "false"
         }
 
         debug {
@@ -240,6 +243,9 @@ android {
             renderscriptDebuggable false
 
             manifestPlaceholders = [maps_v2_apikey: 'デバッグ用の証明書に対応するAPIキーをここに書く']
+
+            // BuildConfig.DEBUG は compile-time constant ではないので、別途定義する
+            buildConfigField "boolean", "DEBUG_COMPILE", "true"
         }
     }
 }
