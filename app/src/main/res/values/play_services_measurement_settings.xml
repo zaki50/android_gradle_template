@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--see https://developers.google.com/android/guides/releases#september_2015-->
+    <integer name="google_app_measurement_enable">0</integer>
+</resources>

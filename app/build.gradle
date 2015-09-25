@@ -89,6 +89,8 @@ dependencies {
     //compile "com.google.android.gms:play-services-panorama:${playServicesVersion}"
     // Google Play Game services
     //compile "com.google.android.gms:play-services-games:${playServicesVersion}"
+    // Google Play Measurement services
+    //compile "com.google.android.gms:play-services-measurement:${playServicesVersion}"
     // SafetyNet
     //compile "com.google.android.gms:play-services-safetynet:${playServicesVersion}"
     // Google Wallet

@@ -42,7 +42,7 @@ project.ext {
     preDexLibs = !project.hasProperty('disablePreDex')
 
     supportPackageVersion = '23.0.1'
-    playServicesVersion = '7.8.0'
+    playServicesVersion = '8.1.0'
     testingSupportPackageVersion = '0.1'
 }
 
