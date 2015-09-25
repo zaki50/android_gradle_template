@@ -12,7 +12,7 @@ buildscript {
     }
 }
 
-subprojects {
+allprojects {
     repositories {
         mavenCentral()
 //https://plus.google.com/109385828142935151413/posts/hF7W59uZ7rX
@@ -44,6 +44,10 @@ project.ext {
     supportPackageVersion = '23.0.1'
     playServicesVersion = '8.1.0'
     testingSupportPackageVersion = '0.1'
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
 
 task wrapper(type: Wrapper) {
