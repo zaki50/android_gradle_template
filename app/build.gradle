@@ -155,6 +155,8 @@ android {
         // test support libの JUnitRunner
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        useLibrary 'org.apache.http.legacy'
+
         // ndk を使用する際の設定。
         // local.properties に ndk.dir=/path/to/ndk の記述を行う必要あり
         // ndk 関連のファイルは例えば app/src/main/jni/ の下に置く
