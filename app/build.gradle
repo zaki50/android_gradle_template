@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'ext-properties'
 
+//noinspection GroovyAssignabilityCheck
 dependencies {
 
     //compile "com.android.support:support-v4:${supportPackageVersion}"
@@ -65,6 +66,8 @@ dependencies {
     // Google Analytics
     // Google Cloud Messaging
     //compile "com.google.android.gms:play-services-base:${playServicesVersion}"
+    // Google Auth
+    //compile "com.google.android.gms:play-services-auth:${playServicesVersion}"
     // Google App Indexing
     //compile "com.google.android.gms:play-services-appindexing:${playServicesVersion}"
     // Google Analytics
@@ -105,7 +108,6 @@ dependencies {
     //compile "com.google.android.gms:play-services-wearable:${playServicesVersion}"
     // Android All Wear
     //compile "com.google.android.gms:play-services-all-wear:${playServicesVersion}"
-
 
     // http://googlemaps.github.io/android-maps-utils/
     compile "com.google.maps.android:android-maps-utils:0.3.4"
