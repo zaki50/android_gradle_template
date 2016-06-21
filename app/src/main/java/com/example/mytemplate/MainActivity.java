@@ -5,13 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        if (mToolbar != null) {
-            setSupportActionBar(mToolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
             // アプリアイコンを左上に表示するのは API 21 から非推奨。どうしてみやりたければ ロゴとして出す
-            // mToolbar.setLogo(R.drawable.ic_launcher);
+            // toolbar.setLogo(R.drawable.ic_launcher);
         }
     }
 
