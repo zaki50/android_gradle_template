@@ -12,6 +12,7 @@ build/
 .idea/libraries/
 .idea/scopes/
 .idea/inspectionProfiles/
+.idea/dictionaries/
 
 # for eclipse
 bin
