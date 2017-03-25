@@ -9,6 +9,7 @@ build/
 .idea/*.xml
 .idea/.name
 .idea/copyright/
+.idea/dictionaries/
 .idea/libraries/
 .idea/scopes/
 .idea/inspectionProfiles/

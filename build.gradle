@@ -7,26 +7,21 @@ buildscript {
     }
     //noinspection GroovyAssignabilityCheck
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0-alpha2'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.android.tools.build:gradle:2.4.0-alpha3'
     }
 }
 
 allprojects {
     repositories {
         mavenCentral()
-//https://plus.google.com/109385828142935151413/posts/hF7W59uZ7rX
-//        mavenLocal()
         jcenter()
-        maven {
-            url "${System.env.HOME}/.m2/repository"
-        }
+        mavenLocal()
     }
 
     project.plugins.whenPluginAdded { plugin ->
-        if ("com.android.build.gradle.AppPlugin".equals(plugin.class.name)) {
+        if ("com.android.build.gradle.AppPlugin" == plugin.class.name) {
             project.android.dexOptions.preDexLibraries = rootProject.ext.preDexLibs
-        } else if ("com.android.build.gradle.LibraryPlugin".equals(plugin.class.name)) {
+        } else if ("com.android.build.gradle.LibraryPlugin" == plugin.class.name) {
             project.android.dexOptions.preDexLibraries = rootProject.ext.preDexLibs
         }
     }
@@ -35,14 +30,14 @@ allprojects {
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
     compileSdkVersion = 25
-    buildToolsVersion = '25.0.1'
+    buildToolsVersion = '25.0.2'
 
     // see http://tools.android.com/tech-docs/new-build-system/tips#TOC-Improving-Build-Server-performance.
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
     preDexLibs = !project.hasProperty('disablePreDex')
 
-    supportPackageVersion = '25.0.1'
-    playServicesVersion = '9.4.0'
+    supportPackageVersion = '25.3.0'
+    playServicesVersion = '10.2.1'
     testingSupportPackageVersion = '0.5'
 }
 
@@ -51,5 +46,5 @@ task clean(type: Delete) {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.2.1'
+    gradleVersion = '3.4.1'
 }

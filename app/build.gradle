@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'ext-properties'
 
 //noinspection GroovyAssignabilityCheck
@@ -28,14 +27,14 @@ dependencies {
 
     compile "com.android.support.constraint:constraint-layout:1.0.0-beta4"
 
-    compile "com.jakewharton:butterknife:8.3.0"
-    apt "com.jakewharton:butterknife-compiler:8.3.0"
+    compile "com.jakewharton:butterknife:8.5.1"
+    annotationProcessor "com.jakewharton:butterknife-compiler:8.5.1"
 
     compile "com.squareup.dagger:dagger:1.2.5"
-    apt "com.squareup.dagger:dagger-compiler:1.2.5"
+    annotationProcessor "com.squareup.dagger:dagger-compiler:1.2.5"
 
     compile "net.vvakame:jsonpullparser-core:1.6.2"
-    apt "net.vvakame:jsonpullparser-apt:1.6.2"
+    annotationProcessor "net.vvakame:jsonpullparser-apt:1.6.2"
 
     compile "org.greenrobot:eventbus:3.0.0"
 
@@ -50,10 +49,10 @@ dependencies {
 
     // https://github.com/sockeqwe/fragmentargs
     compile 'com.hannesdorfmann.fragmentargs:annotation:3.0.2'
-    apt 'com.hannesdorfmann.fragmentargs:processor:3.0.2'
+    annotationProcessor 'com.hannesdorfmann.fragmentargs:processor:3.0.2'
 
     compile "se.emilsjolander:intentbuilder-api:0.14.0"
-    apt "se.emilsjolander:intentbuilder-compiler:0.14.0"
+    annotationProcessor "se.emilsjolander:intentbuilder-compiler:0.14.0"
 
     // Google Play Services 全体を取り込む場合はこちらを。一部機能だけ取り込む場合はコメントアウトし、下から必要な物を有効化
     /*
@@ -107,7 +106,7 @@ dependencies {
     //compile "com.google.android.gms:play-services-wearable:${playServicesVersion}"
 
     // http://googlemaps.github.io/android-maps-utils/
-    compile 'com.google.maps.android:android-maps-utils:0.4.3'
+    compile 'com.google.maps.android:android-maps-utils:0.5'
 
     compile 'org.apache.commons:commons-lang3:3.4'
     compile 'commons-io:commons-io:2.5'
@@ -135,7 +134,7 @@ android {
     defaultConfig {
         applicationId 'com.example.mytemplate'
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 25
 
         // support renderscript を使う場合
         // renderscriptTargetApi 21
