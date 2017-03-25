@@ -2,7 +2,9 @@ package com.example.mytemplate;
 
 import android.app.Application;
 import com.example.mytemplate.prngfix.PRNGFixes;
-import com.squareup.okhttp.OkHttpClient;
+
+import okhttp3.OkHttpClient;
+
 
 public class MyApplication extends Application {
 

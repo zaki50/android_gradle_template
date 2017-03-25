@@ -2,8 +2,8 @@ apply plugin: 'com.android.application'
 
 
 project.ext {
-    supportWearableVersion = '1.4.0'
-    googleWearableVersion = '1.0.0'
+    supportWearableVersion = '2.0.0'
+    googleWearableVersion = '2.0.0'
 }
 
 android {

@@ -1,8 +1,8 @@
 package com.example.mytemplate;
 
 import com.facebook.stetho.Stetho;
-import com.facebook.stetho.okhttp.StethoInterceptor;
-import com.squareup.okhttp.OkHttpClient;
+import com.facebook.stetho.okhttp3.StethoInterceptor;
+import okhttp3.OkHttpClient;
 
 public class MyDebugApplication extends MyApplication {
 
@@ -19,9 +19,6 @@ public class MyDebugApplication extends MyApplication {
 
     @Override
     public OkHttpClient newHttpClient() {
-        final OkHttpClient client = super.newHttpClient();
-        client.networkInterceptors().add(new StethoInterceptor());
-
-        return client;
+        return new OkHttpClient.Builder().addInterceptor(new StethoInterceptor()).build();
     }
 }
