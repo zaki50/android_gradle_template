@@ -107,7 +107,7 @@ dependencies {
     // http://googlemaps.github.io/android-maps-utils/
     compile 'com.google.maps.android:android-maps-utils:0.5'
 
-    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'org.apache.commons:commons-lang3:3.5'
     compile 'commons-io:commons-io:2.5'
 
     // libs/ にある *.jar を一括で追加する
