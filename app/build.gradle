@@ -4,53 +4,53 @@ apply plugin: 'ext-properties'
 //noinspection GroovyAssignabilityCheck
 dependencies {
 
-    //compile "com.android.support:support-v4:${supportPackageVersion}"
-    compile "com.android.support:appcompat-v7:${supportPackageVersion}"
-    compile "com.android.support:preference-v7:${supportPackageVersion}"
-    //compile "com.android.support:support-v13:${supportPackageVersion}"
-    //compile "com.android.support:preference-v14:${supportPackageVersion}"
-    compile "com.android.support:design:${supportPackageVersion}"
-    compile "com.android.support:percent:${supportPackageVersion}"
-    //compile "com.android.support:customtabs:${supportPackageVersion}"
-    //compile "com.android.support:leanback-v17:${supportPackageVersion}"
-    //compile "com.android.support:preference-leanback-v17:${supportPackageVersion}"
-    //compile "com.android.support:recyclerview-v7:${supportPackageVersion}"
-    //compile "com.android.support:gridlayout-v7:${supportPackageVersion}"
-    //compile "com.android.support:mediarouter-v7:${supportPackageVersion}"
-    //compile "com.android.support:palette-v7:${supportPackageVersion}"
-    //compile "com.android.support:cardview-v7:${supportPackageVersion}"
-    compile "com.android.support:support-annotations:${supportPackageVersion}"
+    //implementation "com.android.support:support-v4:${supportPackageVersion}"
+    implementation "com.android.support:appcompat-v7:${supportPackageVersion}"
+    implementation "com.android.support:preference-v7:${supportPackageVersion}"
+    //implementation "com.android.support:support-v13:${supportPackageVersion}"
+    //implementation "com.android.support:preference-v14:${supportPackageVersion}"
+    implementation "com.android.support:design:${supportPackageVersion}"
+    implementation "com.android.support:percent:${supportPackageVersion}"
+    //implementation "com.android.support:customtabs:${supportPackageVersion}"
+    //implementation "com.android.support:leanback-v17:${supportPackageVersion}"
+    //implementation "com.android.support:preference-leanback-v17:${supportPackageVersion}"
+    //implementation "com.android.support:recyclerview-v7:${supportPackageVersion}"
+    //implementation "com.android.support:gridlayout-v7:${supportPackageVersion}"
+    //implementation "com.android.support:mediarouter-v7:${supportPackageVersion}"
+    //implementation "com.android.support:palette-v7:${supportPackageVersion}"
+    //implementation "com.android.support:cardview-v7:${supportPackageVersion}"
+    implementation "com.android.support:support-annotations:${supportPackageVersion}"
 
-    compile "com.android.support:transition:${supportPackageVersion}"
+    implementation "com.android.support:transition:${supportPackageVersion}"
 
-    compile 'com.google.android:flexbox:0.2.6'
+    implementation 'com.google.android:flexbox:0.2.6'
 
-    compile "com.android.support.constraint:constraint-layout:1.0.2"
+    implementation "com.android.support.constraint:constraint-layout:1.0.2"
 
-    compile "com.jakewharton:butterknife:8.5.1"
+    implementation "com.jakewharton:butterknife:8.5.1"
     annotationProcessor "com.jakewharton:butterknife-compiler:8.5.1"
 
-    compile "com.squareup.dagger:dagger:1.2.5"
+    implementation "com.squareup.dagger:dagger:1.2.5"
     annotationProcessor "com.squareup.dagger:dagger-compiler:1.2.5"
 
-    compile "net.vvakame:jsonpullparser-core:1.6.2"
+    implementation "net.vvakame:jsonpullparser-core:1.6.2"
     annotationProcessor "net.vvakame:jsonpullparser-apt:1.6.2"
 
-    compile "org.greenrobot:eventbus:3.0.0"
+    implementation "org.greenrobot:eventbus:3.0.0"
 
-    compile "com.squareup.okio:okio:1.11.0"
-    compile "com.squareup.okhttp3:okhttp:3.6.0"
+    implementation "com.squareup.okio:okio:1.11.0"
+    implementation "com.squareup.okhttp3:okhttp:3.6.0"
 
-    compile "com.squareup.retrofit:retrofit:1.9.0"
+    implementation "com.squareup.retrofit:retrofit:1.9.0"
 
-    compile "io.reactivex:rxjava:1.0.14"
-    compile "io.reactivex:rxandroid:1.0.1"
+    implementation "io.reactivex:rxjava:1.0.14"
+    implementation "io.reactivex:rxandroid:1.0.1"
 
     // https://github.com/sockeqwe/fragmentargs
-    compile 'com.hannesdorfmann.fragmentargs:annotation:3.0.2'
+    implementation 'com.hannesdorfmann.fragmentargs:annotation:3.0.2'
     annotationProcessor 'com.hannesdorfmann.fragmentargs:processor:3.0.2'
 
-    compile "se.emilsjolander:intentbuilder-api:0.14.0"
+    implementation "se.emilsjolander:intentbuilder-api:0.14.0"
     annotationProcessor "se.emilsjolander:intentbuilder-compiler:0.14.0"
 
     // Google Play Services 全体を取り込む場合はこちらを。一部機能だけ取り込む場合はコメントアウトし、下から必要な物を有効化
@@ -58,69 +58,68 @@ dependencies {
      * proguard をかけないとメソッド数上限に当たる可能性が高い。
      * 分割版を使うか、 android.buildTypes.debug.multiDexEnabled を true にするのがおすすめ
      */
-    //compile "com.google.android.gms:play-services:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services:${playServicesVersion}"
 
     // Google Play Services の機能分割版 https://developers.google.com/android/guides/setup
     // Google Plus
-    //compile "com.google.android.gms:play-services-plus:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-plus:${playServicesVersion}"
     // Google Account Login
-    //compile "com.google.android.gms:play-services-auth:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-auth:${playServicesVersion}"
     // Google Actions, Base Client Library
-    //compile "com.google.android.gms:play-services-base:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-base:${playServicesVersion}"
     // Google Address
-    //compile "com.google.android.gms:play-services-identity:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-identity:${playServicesVersion}"
     // Google App Indexing
-    //compile "com.google.android.gms:play-services-appindexing:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-appindexing:${playServicesVersion}"
     // Google App Invites
-    //compile "com.google.android.gms:play-services-appinvite:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-appinvite:${playServicesVersion}"
     // Google Analytics
-    //compile "com.google.android.gms:play-services-analytics:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-analytics:${playServicesVersion}"
     // Google Cast
-    //compile "com.google.android.gms:play-services-cast:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-cast:${playServicesVersion}"
     // Google Cloud Messaging
-    //compile "com.google.android.gms:play-services-gcm:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-gcm:${playServicesVersion}"
     // Google Drive
-    //compile "com.google.android.gms:play-services-drive:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-drive:${playServicesVersion}"
     // Google Fit
-    //compile "com.google.android.gms:play-services-fitness:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-fitness:${playServicesVersion}"
     // Google Location, Activity Recognition, and Places
-    //compile "com.google.android.gms:play-services-location:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-location:${playServicesVersion}"
     // Google Maps
-    compile "com.google.android.gms:play-services-maps:${playServicesVersion}"
+    implementation "com.google.android.gms:play-services-maps:${playServicesVersion}"
     // Google Mobile Ads
-    //compile "com.google.android.gms:play-services-ads:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-ads:${playServicesVersion}"
     // Mobile Vision
-    //compile "com.google.android.gms:play-services-vision:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-vision:${playServicesVersion}"
     // Google Nearby
-    //compile "com.google.android.gms:play-services-nearby:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-nearby:${playServicesVersion}"
     // Google Panorama Viewer
-    //compile "com.google.android.gms:play-services-panorama:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-panorama:${playServicesVersion}"
     // Google Play Game services
-    //compile "com.google.android.gms:play-services-games:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-games:${playServicesVersion}"
     // SafetyNet
-    //compile "com.google.android.gms:play-services-safetynet:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-safetynet:${playServicesVersion}"
     // Android Pay
-    //compile "com.google.android.gms:play-services-wallet:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-wallet:${playServicesVersion}"
     // Android Wear
-    //compile "com.google.android.gms:play-services-wearable:${playServicesVersion}"
+    //implementation "com.google.android.gms:play-services-wearable:${playServicesVersion}"
 
     // http://googlemaps.github.io/android-maps-utils/
-    compile 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
 
-    compile 'org.apache.commons:commons-lang3:3.5'
-    compile 'commons-io:commons-io:2.5'
+    implementation 'org.apache.commons:commons-lang3:3.5'
+    implementation 'commons-io:commons-io:2.5'
 
     // libs/ にある *.jar を一括で追加する
-    compile fileTree(dir: 'libs', include: '*.jar')
+    implementation fileTree(dir: 'libs', include: '*.jar')
 
-    debugCompile 'com.facebook.stetho:stetho:1.4.2'
-    debugCompile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+    debugImplementation 'com.facebook.stetho:stetho:1.4.2'
+    debugImplementation 'com.facebook.stetho:stetho-okhttp3:1.4.2'
 
-    debugCompile project(path: ':library', configuration: 'libDebug')
-    releaseCompile project(path: ':library', configuration: 'libRelease')
+    debugImplementation project(':library')
 
-    androidTestCompile "com.android.support.test:runner:${testingSupportPackageVersion}"
-    androidTestCompile "com.android.support:support-annotations:${supportPackageVersion}"
+    androidTestImplementation "com.android.support.test:runner:${testingSupportPackageVersion}"
+    androidTestImplementation "com.android.support:support-annotations:${supportPackageVersion}"
 
     // android wear 用のアプリを handheld アプリに埋め込む
     wearApp project(':wear')
@@ -167,8 +166,8 @@ android {
 
     compileOptions {
         encoding = "UTF-8"
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     packagingOptions {

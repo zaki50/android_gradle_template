@@ -2,8 +2,8 @@ apply plugin: 'com.android.application'
 
 
 project.ext {
-    supportWearableVersion = '2.0.0'
-    googleWearableVersion = '2.0.0'
+    supportWearableVersion = '2.0.2'
+    googleWearableVersion = '2.0.2'
 }
 
 android {
@@ -24,11 +24,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        encoding = "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        //checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "com.google.android.support:wearable:${supportWearableVersion}"
-    provided "com.google.android.wearable:wearable:${googleWearableVersion}"
-    compile "com.google.android.gms:play-services-wearable:${playServicesVersion}"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation "com.google.android.support:wearable:${supportWearableVersion}"
+    implementation "com.google.android.gms:play-services-wearable:${playServicesVersion}"
+    compileOnly    "com.google.android.wearable:wearable:${googleWearableVersion}"
 }

@@ -4,10 +4,11 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        maven { url 'https://maven.google.com' }
     }
     //noinspection GroovyAssignabilityCheck
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.4.0-alpha3'
+        classpath 'com.android.tools.build:gradle:3.0.0-alpha3'
     }
 }
 
@@ -16,6 +17,7 @@ allprojects {
         mavenCentral()
         jcenter()
         mavenLocal()
+        maven { url 'https://maven.google.com' }
     }
 
     project.plugins.whenPluginAdded { plugin ->
@@ -30,14 +32,14 @@ allprojects {
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
     compileSdkVersion = 25
-    buildToolsVersion = '25.0.2'
+    buildToolsVersion = '25.0.3'
 
     // see http://tools.android.com/tech-docs/new-build-system/tips#TOC-Improving-Build-Server-performance.
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
     preDexLibs = !project.hasProperty('disablePreDex')
 
     supportPackageVersion = '25.3.0'
-    playServicesVersion = '10.2.1'
+    playServicesVersion = '10.2.6'
     testingSupportPackageVersion = '0.5'
 }
 
@@ -46,5 +48,5 @@ task clean(type: Delete) {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.4.1'
+    gradleVersion = '4.0-milestone-1'
 }
