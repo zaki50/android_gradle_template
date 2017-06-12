@@ -31,15 +31,15 @@ allprojects {
 
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
-    compileSdkVersion = 25
-    buildToolsVersion = '25.0.3'
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.0'
 
     // see http://tools.android.com/tech-docs/new-build-system/tips#TOC-Improving-Build-Server-performance.
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
     preDexLibs = !project.hasProperty('disablePreDex')
 
-    supportPackageVersion = '25.3.1'
-    playServicesVersion = '10.2.6'
+    supportPackageVersion = '26.0.0-beta2'
+    playServicesVersion = '11.0.0'
     testingSupportPackageVersion = '0.5'
 }
 
